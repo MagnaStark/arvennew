@@ -1,51 +1,98 @@
 /**
- * ARVEN House Investment Projection Engine
+ * ARVEN House Investment Projection Engine - UPDATED
  * 
  * This module calculates investment returns for fractional villa ownership.
- * It uses quarterly compounding based on payment type (Financed or Cash).
+ * Uses SEMI-ANNUAL compounding based on payment type (Financed or Cash).
+ * Includes appreciation (plusvalía) calculations.
  * 
- * FUTURE ENHANCEMENT:
- * This engine is designed to be modular. In the future, you can replace
- * this logic with data from Excel/CSV files by:
- * 1. Loading the Excel/CSV data
- * 2. Mapping the columns to the same data structure this function returns
- * 3. Replacing the call to this function with your Excel-based data
+ * KEY CHANGES:
+ * - Semi-annual (6-month) compounding instead of quarterly
+ * - Financed: yields begin AFTER full payoff
+ * - Appreciation: reaches 850,000 MXN in 20 months
+ * - Supports MXN and USD currencies
  */
 
 /**
- * Calculate investment projection with quarterly compounding
+ * Calculate appreciation value at a given month
+ * Appreciation grows from initial investment to 850,000 MXN over 20 months
  * 
- * @param {number} pricePerFraction - Price of one fraction (MXN)
+ * @param {number} initialValue - Starting value
+ * @param {number} month - Month number (1-based)
+ * @returns {number} Appreciation value at that month
+ */
+function calculateAppreciation(initialValue, month) {
+  const maxAppreciation = 850000; // MXN
+  const appreciationMonths = 20;
+  
+  if (month <= 0) return initialValue;
+  if (month >= appreciationMonths) return maxAppreciation;
+  
+  // Linear growth for simplicity (can be changed to exponential if needed)
+  const appreciationGain = maxAppreciation - initialValue;
+  const monthlyGrowth = appreciationGain / appreciationMonths;
+  
+  return initialValue + (monthlyGrowth * month);
+}
+
+/**
+ * Calculate investment projection with semi-annual compounding
+ * 
+ * @param {number} pricePerFraction - Price of one fraction
  * @param {number} numberOfFractions - Number of fractions purchased
  * @param {string} paymentType - 'financed' or 'cash'
  * @param {number} annualRate - Annual interest rate (as decimal, e.g., 0.07 for 7%)
  * @param {number} years - Projection period in years
- * @returns {Object} Projection data with quarterly and yearly results
+ * @param {string} currency - 'MXN' or 'USD'
+ * @param {number} financingYears - Years to pay off (only for financed)
+ * @returns {Object} Projection data with semi-annual and yearly results
  */
-export function calculateProjection(pricePerFraction, numberOfFractions, paymentType, annualRate, years) {
+export function calculateProjection(pricePerFraction, numberOfFractions, paymentType, annualRate, years, currency = 'MXN', financingYears = 2) {
   const totalInvestment = pricePerFraction * numberOfFractions;
-  const quarterlyRate = annualRate / 4; // Convert annual rate to quarterly
-  const totalQuarters = years * 4;
+  const semiAnnualRate = annualRate / 2; // Convert annual rate to semi-annual
+  const totalPeriods = years * 2; // 2 periods per year
   
-  const quarterlyResults = [];
+  // For financed, calculate when yields start (after financing is paid off)
+  const yieldsStartPeriod = paymentType === 'financed' ? (financingYears * 2) : 0;
+  
+  const semiAnnualResults = [];
   let currentBalance = totalInvestment;
+  let accumulatedYield = 0;
   
-  // Calculate for each quarter
-  for (let quarter = 1; quarter <= totalQuarters; quarter++) {
+  // Calculate for each semi-annual period
+  for (let period = 1; period <= totalPeriods; period++) {
+    const yearNumber = Math.ceil(period / 2);
+    const periodInYear = ((period - 1) % 2) + 1; // 1 or 2
+    const monthNumber = period * 6; // Convert period to months
+    
     const startingBalance = currentBalance;
-    const interestEarned = startingBalance * quarterlyRate;
+    
+    // Calculate yield (only after financing is paid off for financed type)
+    let interestEarned = 0;
+    if (period > yieldsStartPeriod) {
+      interestEarned = startingBalance * semiAnnualRate;
+      accumulatedYield += interestEarned;
+    }
+    
     const endingBalance = startingBalance + interestEarned;
     
-    const yearNumber = Math.ceil(quarter / 4);
-    const quarterInYear = ((quarter - 1) % 4) + 1;
+    // Calculate appreciation (only in MXN)
+    const appreciationValue = currency === 'MXN' 
+      ? calculateAppreciation(totalInvestment, monthNumber)
+      : totalInvestment; // No appreciation in USD for this version
     
-    quarterlyResults.push({
-      quarter,
+    const totalValueWithAppreciation = endingBalance - totalInvestment + appreciationValue;
+    
+    semiAnnualResults.push({
+      period,
       year: yearNumber,
-      quarterInYear,
+      periodInYear,
+      month: monthNumber,
       startingBalance,
       interestEarned,
       endingBalance,
+      appreciationValue,
+      totalValueWithAppreciation,
+      yieldsActive: period > yieldsStartPeriod,
     });
     
     currentBalance = endingBalance;
@@ -54,11 +101,13 @@ export function calculateProjection(pricePerFraction, numberOfFractions, payment
   // Aggregate results by year
   const yearlyResults = [];
   for (let year = 1; year <= years; year++) {
-    const yearQuarters = quarterlyResults.filter(q => q.year === year);
-    const startingBalance = yearQuarters[0].startingBalance;
-    const endingBalance = yearQuarters[yearQuarters.length - 1].endingBalance;
-    const totalInterest = yearQuarters.reduce((sum, q) => sum + q.interestEarned, 0);
+    const yearPeriods = semiAnnualResults.filter(p => p.year === year);
+    const startingBalance = yearPeriods[0].startingBalance;
+    const endingBalance = yearPeriods[yearPeriods.length - 1].endingBalance;
+    const totalInterest = yearPeriods.reduce((sum, p) => sum + p.interestEarned, 0);
     const totalROI = ((endingBalance - totalInvestment) / totalInvestment) * 100;
+    const yearEndAppreciation = yearPeriods[yearPeriods.length - 1].appreciationValue;
+    const totalValueWithAppreciation = yearPeriods[yearPeriods.length - 1].totalValueWithAppreciation;
     
     yearlyResults.push({
       year,
@@ -66,8 +115,12 @@ export function calculateProjection(pricePerFraction, numberOfFractions, payment
       endingBalance,
       totalInterest,
       totalROI,
+      appreciationValue: yearEndAppreciation,
+      totalValueWithAppreciation,
     });
   }
+  
+  const finalPeriod = semiAnnualResults[semiAnnualResults.length - 1];
   
   return {
     summary: {
@@ -75,11 +128,16 @@ export function calculateProjection(pricePerFraction, numberOfFractions, payment
       paymentType,
       annualRate,
       years,
+      currency,
       finalBalance: currentBalance,
       totalReturns: currentBalance - totalInvestment,
       totalROI: ((currentBalance - totalInvestment) / totalInvestment) * 100,
+      finalAppreciation: finalPeriod.appreciationValue,
+      finalValueWithAppreciation: finalPeriod.totalValueWithAppreciation,
+      totalGain: finalPeriod.totalValueWithAppreciation - totalInvestment,
+      yieldsStartYear: paymentType === 'financed' ? financingYears : 0,
     },
-    quarterlyResults,
+    semiAnnualResults,
     yearlyResults,
   };
 }
@@ -91,24 +149,34 @@ export function calculateProjection(pricePerFraction, numberOfFractions, payment
  */
 export function getYieldRange(paymentType) {
   if (paymentType === 'financed') {
-    return { min: 0.05, max: 0.07 }; // 5-7%
+    return { min: 0.05, max: 0.08 }; // 5-8%
   } else {
     return { min: 0.08, max: 0.12 }; // 8-12%
   }
 }
 
 /**
- * Format currency in Mexican Pesos
+ * Format currency based on selected currency
  * @param {number} amount
+ * @param {string} currency - 'MXN' or 'USD'
  * @returns {string} Formatted currency string
  */
-export function formatCurrency(amount) {
-  return new Intl.NumberFormat('es-MX', {
-    style: 'currency',
-    currency: 'MXN',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
+export function formatCurrency(amount, currency = 'MXN') {
+  if (currency === 'USD') {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount);
+  } else {
+    return new Intl.NumberFormat('es-MX', {
+      style: 'currency',
+      currency: 'MXN',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(amount);
+  }
 }
 
 /**
