@@ -34,5 +34,26 @@ export const BRAND = {
   },
 };
 
+// Pricing Configuration
+export const PRICING = {
+  // Pre-sale prices
+  preSale: {
+    MXN: 555000,
+    USD: 30000,
+  },
+  // Discounted prices (10% off)
+  discounted: {
+    MXN: 499500,
+    USD: 27000,
+  },
+  // Appreciation (Plusvalía)
+  appreciation: {
+    maxValue: 850000, // MXN only
+    months: 20, // 1 year 8 months
+  },
+  // Exchange rate for reference
+  exchangeRate: 18.5, // 1 USD = 18.5 MXN (approximate)
+};
+
 // Google Fonts Import URL
 export const FONT_URL = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pinyon+Script&display=swap';
