@@ -7,18 +7,26 @@ import { CalculatorCharts } from './calculator/CalculatorCharts';
 import { calculateProjection, getYieldRange } from '../utils/projectionEngine';
 import { generatePDF } from '../utils/pdfGenerator';
 import { toast } from 'sonner';
+import { PRICING } from '../config/theme';
 
 export const CalculatorSection = () => {
   // Input states
-  const [pricePerFraction, setPricePerFraction] = useState(500000);
+  const [currency, setCurrency] = useState('MXN');
+  const [priceType, setPriceType] = useState('discounted'); // 'presale' or 'discounted'
   const [numberOfFractions, setNumberOfFractions] = useState(1);
   const [paymentType, setPaymentType] = useState('cash');
   const [annualRate, setAnnualRate] = useState(0.10); // 10% default
   const [years, setYears] = useState(10);
+  const [financingYears, setFinancingYears] = useState(2);
 
   // Projection data
   const [projectionData, setProjectionData] = useState(null);
   const [yieldRange, setYieldRange] = useState(getYieldRange('cash'));
+
+  // Get current price based on currency and price type
+  const pricePerFraction = priceType === 'presale' 
+    ? PRICING.preSale[currency]
+    : PRICING.discounted[currency];
 
   // Update yield range when payment type changes
   useEffect(() => {
@@ -37,10 +45,12 @@ export const CalculatorSection = () => {
       numberOfFractions,
       paymentType,
       annualRate,
-      years
+      years,
+      currency,
+      financingYears
     );
     setProjectionData(data);
-  }, [pricePerFraction, numberOfFractions, paymentType, annualRate, years]);
+  }, [pricePerFraction, numberOfFractions, paymentType, annualRate, years, currency, financingYears]);
 
   // Handle PDF export
   const handleExportPDF = async () => {
@@ -52,6 +62,9 @@ export const CalculatorSection = () => {
         paymentType,
         annualRate,
         years,
+        currency,
+        priceType,
+        financingYears,
       });
       toast.success('PDF descargado exitosamente');
     } catch (error) {
@@ -73,7 +86,7 @@ export const CalculatorSection = () => {
             Calculadora de Inversión
           </h2>
           <p className="text-lg text-[#6B7055] max-w-2xl mx-auto">
-            Simula tus rendimientos y descarga una proyección personalizada en PDF
+            Simula tus rendimientos semestrales, plusvalía y descarga tu proyección en PDF
           </p>
         </div>
 
@@ -82,8 +95,10 @@ export const CalculatorSection = () => {
           {/* Left: Inputs */}
           <div className="lg:col-span-1">
             <CalculatorInputs
-              pricePerFraction={pricePerFraction}
-              setPricePerFraction={setPricePerFraction}
+              currency={currency}
+              setCurrency={setCurrency}
+              priceType={priceType}
+              setPriceType={setPriceType}
               numberOfFractions={numberOfFractions}
               setNumberOfFractions={setNumberOfFractions}
               paymentType={paymentType}
@@ -93,6 +108,8 @@ export const CalculatorSection = () => {
               years={years}
               setYears={setYears}
               yieldRange={yieldRange}
+              financingYears={financingYears}
+              setFinancingYears={setFinancingYears}
             />
           </div>
 
@@ -103,6 +120,7 @@ export const CalculatorSection = () => {
               paymentType={paymentType}
               annualRate={annualRate}
               years={years}
+              currency={currency}
             />
           </div>
         </div>
@@ -115,12 +133,17 @@ export const CalculatorSection = () => {
             numberOfFractions={numberOfFractions}
             paymentType={paymentType}
             years={years}
+            currency={currency}
+            financingYears={financingYears}
           />
         </div>
 
         {/* Tables */}
         <div className="mb-8">
-          <CalculatorTables projectionData={projectionData} />
+          <CalculatorTables 
+            projectionData={projectionData}
+            currency={currency}
+          />
         </div>
 
         {/* Export Button */}
@@ -138,7 +161,9 @@ export const CalculatorSection = () => {
         <div className="mt-8 text-center">
           <p className="text-sm text-[#6B7055] italic max-w-3xl mx-auto bg-[#FFFBF2] p-4 rounded-lg border border-[#D4D1C5]">
             <strong>Aviso:</strong> Estas proyecciones son ilustrativas y no constituyen asesoría financiera. 
-            Los resultados reales pueden variar según las condiciones del mercado y otros factores. 
+            Los rendimientos mostrados están basados en estimaciones y los resultados reales pueden variar. 
+            Los rendimientos en inversiones financiadas comienzan después de liquidar el pago total.
+            La plusvalía estimada de $850,000 MXN en 20 meses es una proyección y no una garantía.
             Te recomendamos consultar con un asesor financiero antes de tomar decisiones de inversión.
           </p>
         </div>
