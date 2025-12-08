@@ -1,8 +1,31 @@
-# ARVEN House - Contratos y Documentación
+# ARVEN House - Contratos y Documentación [ACTUALIZADO]
 
 ## Resumen del Proyecto
 
 Landing page completa para ARVEN House con calculadora interactiva de inversiones en propiedad fraccionada de villas en Tulum.
+
+## ACTUALIZACIÓN IMPORTANTE - Diciembre 2024
+
+Se han actualizado TODOS los cálculos, precios y lógica de proyección según las especificaciones finales:
+
+### Cambios Principales:
+1. **Precios actualizados**: 
+   - Pre-venta: $555,000 MXN / $30,000 USD
+   - Descuento 10%: $499,500 MXN / $27,000 USD
+
+2. **Rendimientos actualizados**:
+   - Financiado: 5-8% anual (antes 5-7%)
+   - Contado: 8-12% anual (sin cambios)
+   - Frecuencia: SEMESTRAL (antes trimestral)
+
+3. **Plusvalía agregada**:
+   - Hasta $850,000 MXN en 20 meses (1 año 8 meses)
+   - Curva de apreciación lineal
+   - Solo aplica en MXN
+
+4. **Lógica de financiamiento**:
+   - Rendimientos comienzan DESPUÉS de liquidar
+   - Usuario puede seleccionar años para liquidar (1-5 años)
 
 ## Arquitectura del Proyecto
 
