@@ -2,17 +2,19 @@ import React from 'react';
 import { Info } from 'lucide-react';
 import { Slider } from '../ui/slider';
 import { Label } from '../ui/label';
-import { Input } from '../ui/input';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from '../ui/tooltip';
+import { PRICING } from '../../config/theme';
 
 export const CalculatorInputs = ({
-  pricePerFraction,
-  setPricePerFraction,
+  currency,
+  setCurrency,
+  priceType,
+  setPriceType,
   numberOfFractions,
   setNumberOfFractions,
   paymentType,
@@ -22,35 +24,91 @@ export const CalculatorInputs = ({
   years,
   setYears,
   yieldRange,
+  financingYears,
+  setFinancingYears,
 }) => {
+  // Get current price based on currency and price type
+  const currentPrice = priceType === 'presale' 
+    ? PRICING.preSale[currency]
+    : PRICING.discounted[currency];
+
   return (
     <div className="space-y-6 bg-white p-6 rounded-lg border-2 border-[#D4D1C5]">
       <h3 className="text-xl font-semibold text-[#41472D] mb-4">Parámetros de Inversión</h3>
 
-      {/* Price per Fraction */}
+      {/* Currency Selector */}
       <div>
-        <div className="flex items-center gap-2 mb-2">
-          <Label htmlFor="price" className="text-[#41472D]">Precio por Fracción (MXN)</Label>
+        <Label className="text-[#41472D] mb-3 block">Moneda</Label>
+        <div className="grid grid-cols-2 gap-3">
+          <button
+            onClick={() => setCurrency('MXN')}
+            className={`py-2 px-4 rounded-md border-2 transition-all duration-200 ${
+              currency === 'MXN'
+                ? 'bg-[#41472D] text-white border-[#41472D]'
+                : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
+            }`}
+          >
+            MXN (Pesos)
+          </button>
+          <button
+            onClick={() => setCurrency('USD')}
+            className={`py-2 px-4 rounded-md border-2 transition-all duration-200 ${
+              currency === 'USD'
+                ? 'bg-[#41472D] text-white border-[#41472D]'
+                : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
+            }`}
+          >
+            USD (Dólares)
+          </button>
+        </div>
+      </div>
+
+      {/* Price Type Selector */}
+      <div>
+        <div className="flex items-center gap-2 mb-3">
+          <Label className="text-[#41472D]">Precio por Fracción</Label>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
                 <Info size={16} className="text-[#6B7055]" />
               </TooltipTrigger>
               <TooltipContent>
-                <p className="max-w-xs">Precio base de cada fracción de la villa</p>
+                <p className="max-w-xs">Elige entre precio de pre-venta o precio con 10% de descuento</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>
-        <Input
-          id="price"
-          type="number"
-          value={pricePerFraction}
-          onChange={(e) => setPricePerFraction(Number(e.target.value))}
-          className="border-[#D4D1C5] focus:border-[#41472D]"
-          min={100000}
-          step={10000}
-        />
+        <div className="grid grid-cols-1 gap-3">
+          <button
+            onClick={() => setPriceType('presale')}
+            className={`py-3 px-4 rounded-md border-2 transition-all duration-200 text-left ${
+              priceType === 'presale'
+                ? 'bg-[#41472D] text-white border-[#41472D]'
+                : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
+            }`}
+          >
+            <div className="font-medium">Precio Pre-venta</div>
+            <div className="text-sm mt-1 opacity-80">
+              {currency === 'MXN' ? '$555,000 MXN' : '$30,000 USD'}
+            </div>
+          </button>
+          <button
+            onClick={() => setPriceType('discounted')}
+            className={`py-3 px-4 rounded-md border-2 transition-all duration-200 text-left relative ${
+              priceType === 'discounted'
+                ? 'bg-[#41472D] text-white border-[#41472D]'
+                : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
+            }`}
+          >
+            <div className="absolute -top-2 -right-2 bg-[#EFE6AB] text-[#41472D] text-xs font-bold py-1 px-2 rounded">
+              10% OFF
+            </div>
+            <div className="font-medium">Apartando Ahora</div>
+            <div className="text-sm mt-1 opacity-80">
+              {currency === 'MXN' ? '$499,500 MXN' : '$27,000 USD'}
+            </div>
+          </button>
+        </div>
       </div>
 
       {/* Number of Fractions */}
@@ -64,7 +122,7 @@ export const CalculatorInputs = ({
                   <Info size={16} className="text-[#6B7055]" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className="max-w-xs">¿Qué es una fracción? Cada fracción representa una participación en la propiedad de la villa</p>
+                  <p className="max-w-xs">Cada fracción representa una participación en la propiedad de la villa</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -95,7 +153,8 @@ export const CalculatorInputs = ({
               </TooltipTrigger>
               <TooltipContent>
                 <p className="max-w-xs">
-                  Financiado: 5-7% anual | Contado: 8-12% anual
+                  Financiado: 5-8% anual (rendimientos después de liquidar)<br/>
+                  Contado: 8-12% anual (rendimientos desde año 1)
                 </p>
               </TooltipContent>
             </Tooltip>
@@ -111,7 +170,7 @@ export const CalculatorInputs = ({
             }`}
           >
             <div className="font-medium">Financiado</div>
-            <div className="text-xs mt-1 opacity-80">5-7% anual</div>
+            <div className="text-xs mt-1 opacity-80">5-8% anual</div>
           </button>
           <button
             onClick={() => setPaymentType('cash')}
@@ -126,6 +185,30 @@ export const CalculatorInputs = ({
           </button>
         </div>
       </div>
+
+      {/* Financing Years (only show if financed) */}
+      {paymentType === 'financed' && (
+        <div className="bg-[#FFFBF2] p-4 rounded-md border border-[#EFE6AB]">
+          <div className="flex items-center justify-between mb-2">
+            <Label className="text-[#41472D]">Años para liquidar: {financingYears}</Label>
+          </div>
+          <Slider
+            value={[financingYears]}
+            onValueChange={(value) => setFinancingYears(value[0])}
+            min={1}
+            max={5}
+            step={1}
+            className="my-4"
+          />
+          <div className="flex justify-between text-xs text-[#6B7055]">
+            <span>1 año</span>
+            <span>5 años</span>
+          </div>
+          <p className="text-xs text-[#6B7055] mt-2 italic">
+            * Los rendimientos comienzan después de liquidar la inversión
+          </p>
+        </div>
+      )}
 
       {/* Annual Rate */}
       <div>
@@ -145,13 +228,13 @@ export const CalculatorInputs = ({
             onClick={() => setAnnualRate(yieldRange.min)}
             className="text-xs py-1 px-3 border border-[#D4D1C5] rounded hover:bg-[#FFFBF2] transition-colors duration-200"
           >
-            Escenario Mínimo ({(yieldRange.min * 100).toFixed(0)}%)
+            Mínimo ({(yieldRange.min * 100).toFixed(0)}%)
           </button>
           <button
             onClick={() => setAnnualRate(yieldRange.max)}
             className="text-xs py-1 px-3 border border-[#D4D1C5] rounded hover:bg-[#FFFBF2] transition-colors duration-200"
           >
-            Escenario Máximo ({(yieldRange.max * 100).toFixed(0)}%)
+            Máximo ({(yieldRange.max * 100).toFixed(0)}%)
           </button>
         </div>
       </div>
