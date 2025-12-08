@@ -65,12 +65,12 @@ export const HeroSection = () => {
               <div className="text-sm text-[#6B7055]">Rendimiento anual</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-[#41472D] mb-2">Trimestral</div>
+              <div className="text-4xl font-bold text-[#41472D] mb-2">Semestral</div>
               <div className="text-sm text-[#6B7055]">Retornos periódicos</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-[#41472D] mb-2">Tulum</div>
-              <div className="text-sm text-[#6B7055]">Ubicación privilegiada</div>
+              <div className="text-4xl font-bold text-[#41472D] mb-2">$850K</div>
+              <div className="text-sm text-[#6B7055]">Plusvalía en 20 meses</div>
             </div>
           </div>
         </div>
