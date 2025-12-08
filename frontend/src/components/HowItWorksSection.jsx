@@ -6,17 +6,17 @@ export const HowItWorksSection = () => {
     {
       icon: Search,
       title: 'Elige tus Fracciones',
-      description: 'Decide cuántas fracciones de la villa deseas adquirir según tu presupuesto de inversión.',
+      description: 'Desde $499,500 MXN con descuento. Decide cuántas fracciones adquirir según tu presupuesto.',
     },
     {
       icon: CreditCard,
       title: 'Selecciona tu Forma de Pago',
-      description: 'Elige entre pago de contado (mayores rendimientos) o financiamiento (accesibilidad).',
+      description: 'Contado: 8-12% anual desde año 1. Financiado: 5-8% anual después de liquidar.',
     },
     {
       icon: TrendingUp,
-      title: 'Recibe Rendimientos',
-      description: 'Obtén retornos trimestrales y benefíciate de la apreciación a largo plazo de tu inversión.',
+      title: 'Recibe Rendimientos Semestrales',
+      description: 'Retornos cada 6 meses más plusvalía de hasta $850,000 MXN en 20 meses.',
     },
     {
       icon: Home,
