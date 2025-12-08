@@ -1,33 +1,33 @@
 import React from 'react';
-import { TrendingUp, DollarSign, Calendar, Percent } from 'lucide-react';
+import { TrendingUp, DollarSign, Calendar, Percent, Home } from 'lucide-react';
 import { formatCurrency, formatPercent } from '../../utils/projectionEngine';
 
-export const CalculatorSummary = ({ projectionData, paymentType, annualRate, years }) => {
+export const CalculatorSummary = ({ projectionData, paymentType, annualRate, years, currency }) => {
   const summary = projectionData.summary;
 
   const stats = [
     {
       icon: DollarSign,
       label: 'Inversión Total',
-      value: formatCurrency(summary.totalInvestment),
+      value: formatCurrency(summary.totalInvestment, currency),
       color: 'text-[#41472D]',
     },
     {
       icon: TrendingUp,
-      label: 'Capital Final',
-      value: formatCurrency(summary.finalBalance),
+      label: 'Rendimientos',
+      value: formatCurrency(summary.totalReturns, currency),
+      color: 'text-[#41472D]',
+    },
+    {
+      icon: Home,
+      label: 'Plusvalía',
+      value: currency === 'MXN' ? formatCurrency(summary.finalAppreciation - summary.totalInvestment, 'MXN') : 'N/A',
       color: 'text-[#41472D]',
     },
     {
       icon: Percent,
-      label: 'Rendimiento Total',
-      value: formatCurrency(summary.totalReturns),
-      color: 'text-[#41472D]',
-    },
-    {
-      icon: Calendar,
-      label: 'ROI Total',
-      value: formatPercent(summary.totalROI),
+      label: 'Valor Total Final',
+      value: formatCurrency(summary.finalValueWithAppreciation, currency),
       color: 'text-[#41472D]',
     },
   ];
@@ -53,6 +53,15 @@ export const CalculatorSummary = ({ projectionData, paymentType, annualRate, yea
         })}
       </div>
 
+      <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg mb-4">
+        <div className="text-center">
+          <div className="text-sm text-gray-200 mb-1">Ganancia Total</div>
+          <div className="text-3xl font-bold text-[#EFE6AB]">
+            {formatCurrency(summary.totalGain, currency)}
+          </div>
+        </div>
+      </div>
+
       <div className="border-t border-white/20 pt-4 space-y-2">
         <div className="flex justify-between text-sm">
           <span className="text-gray-200">Tipo de Pago:</span>
@@ -60,11 +69,21 @@ export const CalculatorSummary = ({ projectionData, paymentType, annualRate, yea
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-200">Tasa Anual:</span>
-          <span className="font-medium">{formatPercent(annualRate * 100)} (compuesto trimestralmente)</span>
+          <span className="font-medium">{formatPercent(annualRate * 100)} (semestral)</span>
         </div>
+        {paymentType === 'financed' && summary.yieldsStartYear > 0 && (
+          <div className="flex justify-between text-sm">
+            <span className="text-gray-200">Rendimientos inician:</span>
+            <span className="font-medium">Año {summary.yieldsStartYear + 1}</span>
+          </div>
+        )}
         <div className="flex justify-between text-sm">
           <span className="text-gray-200">Periodo:</span>
           <span className="font-medium">{years} años</span>
+        </div>
+        <div className="flex justify-between text-sm">
+          <span className="text-gray-200">Moneda:</span>
+          <span className="font-medium">{currency}</span>
         </div>
       </div>
     </div>
