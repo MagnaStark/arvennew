@@ -9,6 +9,7 @@ import {
   TooltipTrigger,
 } from '../ui/tooltip';
 import { PRICING } from '../../config/theme';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export const CalculatorInputs = ({
   currency,
