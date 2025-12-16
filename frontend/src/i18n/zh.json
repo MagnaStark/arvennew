@@ -1,0 +1,139 @@
+{
+  "language": "中文",
+  "currency": {"mxn": "MXN (比索)", "usd": "USD (美元)"},
+  "header": {
+    "home": "首页", "howItWorks": "如何运作", "calculator": "计算器",
+    "benefits": "优势", "faq": "常见问题", "contact": "联系", "speakWithAdvisor": "与顾问交谈"
+  },
+  "hero": {
+    "tagline": "自然遗产", "title": "投资您的未来",
+    "subtitle": "图卢姆别墅分割产权",
+    "description": "通过豪华别墅的分割产权，获得可预测的回报和生活方式优势。每半年获得回报的智能投资。",
+    "ctaCalculate": "计算我的回报", "ctaSpeak": "与顾问交谈",
+    "stats": {"yield": "年度收益", "frequency": "每半年", "frequencyDesc": "定期回报",
+    "appreciation": "$85万", "appreciationDesc": "20个月内增值"}
+  },
+  "howItWorks": {
+    "title": "如何运作？",
+    "subtitle": "分割产权模式允许您以较低的初始资本投资优质房地产，并获得有吸引力的回报。",
+    "steps": {
+      "choose": {"title": "选择您的份额", "description": "从27,000美元开始享受折扣。根据您的预算决定购买多少份额。"},
+      "payment": {"title": "选择您的付款方式", "description": "现金：从第1年起8-12%年回报。融资：偿还后5-8%年回报。"},
+      "returns": {"title": "接收半年回报", "description": "每6个月获得回报，加上20个月内高达850,000墨西哥比索的增值。"},
+      "enjoy": {"title": "享受您的投资", "description": "进入图卢姆的别墅，专业管理您的分割产权。"}
+    },
+    "disclaimer": "* 所示数字仅供参考。实际结果可能有所不同。"
+  },
+  "calculator": {
+    "title": "投资计算器",
+    "subtitle": "模拟您的半年回报、增值并下载PDF投影",
+    "inputs": {
+      "title": "投资参数", "currency": "货币", "priceType": "每份价格",
+      "priceTypeTooltip": "在预售价格或10%折扣价格之间选择",
+      "presale": "预售价格", "discounted": "立即预订", "fractions": "份额数量",
+      "fractionsTooltip": "每份代表别墅产权的一份股份",
+      "paymentType": "付款类型",
+      "paymentTypeTooltip": "融资：5-8%年回报（偿还后）\n现金：8-12%年回报（从第1年开始）",
+      "financed": "融资", "cash": "现金", "financingYears": "偿还年限",
+      "financingNote": "* 回报在完成投资偿还后开始",
+      "annualRate": "年利率", "minScenario": "最小", "maxScenario": "最大",
+      "projectionYears": "投影期", "years": "年", "year": "年"
+    },
+    "summary": {
+      "title": "您的投资摘要", "totalInvestment": "总投资",
+      "returns": "回报", "appreciation": "增值", "finalValue": "最终总价值",
+      "totalGain": "总收益", "paymentType": "付款类型", "annualRate": "年利率",
+      "semiannual": "半年", "yieldsStart": "回报开始", "period": "期间", "currency": "货币"
+    },
+    "charts": {
+      "yieldsOnly": "资本增长（仅回报）",
+      "yieldsAndAppreciation": "总价值（回报+增值）",
+      "comparison": "情景比较",
+      "appreciationNote": "* 估计增值：20个月内高达850,000墨西哥比索",
+      "legends": {
+        "capitalWithYields": "包含回报的资本", "initialInvestment": "初始投资",
+        "yieldsOnly": "仅回报", "yieldsAndAppreciation": "回报+增值",
+        "onlyYields": "仅回报", "totalGain": "总收益"
+      },
+      "scenarios": {"minimum": "最小", "current": "当前", "maximum": "最大", "rate": "利率"}
+    },
+    "tables": {
+      "yearly": "年度投影", "semiannual": "半年投影", "year": "年",
+      "startingCapital": "初始资本", "returns": "回报", "endingCapital": "最终资本",
+      "appreciation": "增值", "totalValue": "总价值", "semester": "学期", "return": "回报",
+      "status": "状态", "active": "活跃", "financing": "融资"
+    },
+    "downloadPDF": "下载PDF投影",
+    "disclaimer": "<strong>通知：</strong>这些投影仅供参考，不构成财务建议。显示的回报基于估计，实际结果可能有所不同。融资投资的回报在完成全额付款后开始。20个月内850,000墨西哥比索的估计增值是一个投影，而不是保证。我们建议在做出投资决定之前咨询财务顾问。"
+  },
+  "benefits": {
+    "title": "主要优势",
+    "subtitle": "为您的财富提供多重优势的智能投资",
+    "items": {
+      "location": {"title": "优越位置", "description": "在图卢姆拥有豪华别墅的共同所有权，这是墨西哥和加勒比地区最受欢迎的目的地之一。"},
+      "management": {"title": "专业管理", "description": "完整的物业管理。您无需担心维护即可获得收益。"},
+      "cashflow": {"title": "半年现金流", "description": "每6个月定期回报加上房地产市场的长期资本增值。"},
+      "transparency": {"title": "透明投影", "description": "基于真实数据的计算器，让您可以模拟不同的投资场景。"}
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于分割产权投资最常见问题的答案",
+    "notFound": "找不到您问题的答案？",
+    "contactUs": "直接联系我们",
+    "items": [
+      {"question": "Arven House的"份额"是什么？", "answer": "份额代表图卢姆别墅产权的一部分。通过购买份额，您成为共有业主，有权获得与您的投资成比例的回报。每份价格为555,000墨西哥比索（30,000美元）或499,500墨西哥比索（27,000美元），立即预订可享受10%折扣。"},
+      {"question": "我多久收到一次回报？", "answer": "回报每半年分配一次。这意味着您将每6个月收到一次付款，根据您的投资回报和您拥有的份额数量计算。"},
+      {"question": "回报有保证吗？", "answer": "没有。我们计算器中显示的投影仅供参考，基于图卢姆房地产市场的保守估计。实际回报可能会根据多种因素而变化。20个月内850,000墨西哥比索的估计增值也不是保证。"},
+      {"question": "融资付款和现金付款有什么区别？", "answer": "现金付款让您从第一年开始获得更高的回报（8-12%年），因为没有融资成本。融资付款提供可及性，有计划的付款，回报为5-8%年，在您完全偿还投资后开始。"},
+      {"question": "如果我融资，何时开始收到回报？", "answer": "如果您选择融资，回报在您完全偿还份额后开始。例如，如果您融资2年，回报将从第3年开始。"},
+      {"question": "850,000墨西哥比索的增值是什么？", "answer": "增值是物业价值的估计增加。我们预计价值可以在20个月内达到850,000墨西哥比索。这是基于图卢姆市场的估计，不构成保证。"},
+      {"question": "我可以出售我的份额吗？", "answer": "可以，份额可以出售，但这受共有产权合同中规定的条件约束。"},
+      {"question": "物业管理如何运作？", "answer": "Arven House处理别墅的所有专业管理：维护、清洁、度假租赁营销、客人服务和财务管理。"}
+    ]
+  },
+  "contact": {
+    "title": "开始您的投资",
+    "subtitle": "填写表格，专业顾问将与您联系",
+    "form": {
+      "name": "全名", "email": "电子邮件", "phone": "电话",
+      "investment": "大约投资金额或份额数量",
+      "investmentPlaceholder": "例如：2份或60,000美元",
+      "message": "附加消息（可选）",
+      "messagePlaceholder": "告诉我们更多关于您的兴趣...",
+      "submit": "我想与顾问交谈",
+      "successTitle": "感谢您的关注！",
+      "successMessage": "顾问将很快与您联系。",
+      "errorRequired": "请填写所有必填字段",
+      "errorEmail": "请输入有效的电子邮件"
+    },
+    "why": {
+      "title": "为什么选择Arven House投资？",
+      "items": [
+        "以较低的初始资本进入豪华房产",
+        "可预测的半年回报",
+        "无忧的专业管理",
+        "位于最独特的目的地之一",
+        "基于数据的投影完全透明"
+      ]
+    },
+    "direct": {
+      "title": "直接联系",
+      "email": "电子邮件：contacto@arvenhouse.com",
+      "phone": "电话：+52 998 123 4567",
+      "whatsapp": "WhatsApp：+52 998 123 4567"
+    }
+  },
+  "footer": {
+    "tagline": "自然遗产",
+    "description": "图卢姆豪华别墅的分割产权投资。为您的未来留下自然遗产。",
+    "contact": "联系", "followUs": "关注我们", "terms": "条款和条件",
+    "privacy": "隐私政策", "rights": "版权所有。"
+  },
+  "toast": {
+    "generatingPDF": "正在生成PDF...",
+    "pdfSuccess": "PDF下载成功",
+    "pdfError": "生成PDF时出错",
+    "formSuccess": "感谢您的关注！顾问将很快与您联系。"
+  }
+}
