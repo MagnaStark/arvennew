@@ -3,6 +3,7 @@ import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, L
 import { formatCurrency } from '../../utils/projectionEngine';
 import { calculateProjection, getYieldRange } from '../../utils/projectionEngine';
 import { PRICING } from '../../config/theme';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export const CalculatorCharts = ({ 
   projectionData, 
@@ -13,18 +14,20 @@ export const CalculatorCharts = ({
   currency,
   financingYears 
 }) => {
+  const { t } = useLanguage();
+
   // Prepare data for growth chart (yields only)
   const yieldsOnlyData = projectionData.yearlyResults.map((yearData) => ({
-    año: `Año ${yearData.year}`,
+    año: `${t.calculator.tables.year} ${yearData.year}`,
     capital: yearData.endingBalance,
     inversión: projectionData.summary.totalInvestment,
   }));
 
   // Prepare data for yields + appreciation chart
   const yieldsAndAppreciationData = projectionData.yearlyResults.map((yearData) => ({
-    año: `Año ${yearData.year}`,
-    'Solo Rendimientos': yearData.endingBalance,
-    'Rendimientos + Plusvalía': yearData.totalValueWithAppreciation,
+    año: `${t.calculator.tables.year} ${yearData.year}`,
+    yieldsOnly: yearData.endingBalance,
+    yieldsAndAppreciation: yearData.totalValueWithAppreciation,
     inversión: projectionData.summary.totalInvestment,
   }));
 
@@ -52,19 +55,19 @@ export const CalculatorCharts = ({
 
   const comparisonData = [
     {
-      escenario: 'Mínimo',
+      escenario: t.calculator.charts.scenarios.minimum,
       rendimiento: minScenario.summary.totalReturns,
       total: minScenario.summary.totalGain,
       rate: `${(yieldRange.min * 100).toFixed(0)}%`,
     },
     {
-      escenario: 'Actual',
+      escenario: t.calculator.charts.scenarios.current,
       rendimiento: projectionData.summary.totalReturns,
       total: projectionData.summary.totalGain,
       rate: `${(projectionData.summary.annualRate * 100).toFixed(1)}%`,
     },
     {
-      escenario: 'Máximo',
+      escenario: t.calculator.charts.scenarios.maximum,
       rendimiento: maxScenario.summary.totalReturns,
       total: maxScenario.summary.totalGain,
       rate: `${(yieldRange.max * 100).toFixed(0)}%`,
@@ -90,7 +93,7 @@ export const CalculatorCharts = ({
     <div className="space-y-8">
       {/* Yields Only Chart */}
       <div className="bg-white p-6 rounded-lg border-2 border-[#D4D1C5]">
-        <h3 className="text-xl font-semibold text-[#41472D] mb-4">Crecimiento de Capital (Solo Rendimientos)</h3>
+        <h3 className="text-xl font-semibold text-[#41472D] mb-4">{t.calculator.charts.yieldsOnly}</h3>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={yieldsOnlyData}>
             <CartesianGrid strokeDasharray="3 3" stroke="#D4D1C5" />
@@ -108,7 +111,7 @@ export const CalculatorCharts = ({
               dataKey="capital"
               stroke="#41472D"
               strokeWidth={3}
-              name="Capital con Rendimientos"
+              name={t.calculator.charts.legends.capitalWithYields}
               dot={{ fill: '#41472D', r: 4 }}
               activeDot={{ r: 6 }}
             />
@@ -118,7 +121,7 @@ export const CalculatorCharts = ({
               stroke="#EFE6AB"
               strokeWidth={2}
               strokeDasharray="5 5"
-              name="Inversión Inicial"
+              name={t.calculator.charts.legends.initialInvestment}
               dot={false}
             />
           </LineChart>
@@ -128,7 +131,7 @@ export const CalculatorCharts = ({
       {/* Yields + Appreciation Chart */}
       <div className="bg-white p-6 rounded-lg border-2 border-[#D4D1C5]">
         <h3 className="text-xl font-semibold text-[#41472D] mb-4">
-          Valor Total (Rendimientos + Plusvalía)
+          {t.calculator.charts.yieldsAndAppreciation}
         </h3>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={yieldsAndAppreciationData}>
@@ -144,18 +147,18 @@ export const CalculatorCharts = ({
             <Legend />
             <Line
               type="monotone"
-              dataKey="Solo Rendimientos"
+              dataKey="yieldsOnly"
               stroke="#6B7055"
               strokeWidth={2}
-              name="Solo Rendimientos"
+              name={t.calculator.charts.legends.onlyYields}
               dot={{ fill: '#6B7055', r: 3 }}
             />
             <Line
               type="monotone"
-              dataKey="Rendimientos + Plusvalía"
+              dataKey="yieldsAndAppreciation"
               stroke="#41472D"
               strokeWidth={3}
-              name="Rendimientos + Plusvalía"
+              name={t.calculator.charts.legends.yieldsAndAppreciation}
               dot={{ fill: '#41472D', r: 4 }}
               activeDot={{ r: 6 }}
             />
@@ -163,7 +166,7 @@ export const CalculatorCharts = ({
         </ResponsiveContainer>
         {currency === 'MXN' && (
           <p className="text-sm text-[#6B7055] mt-2 text-center">
-            * Plusvalía estimada: hasta $850,000 MXN en 20 meses
+            {t.calculator.charts.appreciationNote}
           </p>
         )}
       </div>
@@ -171,7 +174,7 @@ export const CalculatorCharts = ({
       {/* Comparison Chart */}
       <div className="bg-white p-6 rounded-lg border-2 border-[#D4D1C5]">
         <h3 className="text-xl font-semibold text-[#41472D] mb-4">
-          Comparación de Escenarios ({years} años)
+          {t.calculator.charts.comparison} ({years} {years === 1 ? t.calculator.inputs.year : t.calculator.inputs.years})
         </h3>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={comparisonData}>
@@ -185,15 +188,15 @@ export const CalculatorCharts = ({
             }} />
             <Tooltip content={<CustomTooltip />} />
             <Legend />
-            <Bar dataKey="rendimiento" fill="#6B7055" name="Solo Rendimientos" radius={[8, 8, 0, 0]} />
-            <Bar dataKey="total" fill="#41472D" name="Ganancia Total" radius={[8, 8, 0, 0]} />
+            <Bar dataKey="rendimiento" fill="#6B7055" name={t.calculator.charts.legends.yieldsOnly} radius={[8, 8, 0, 0]} />
+            <Bar dataKey="total" fill="#41472D" name={t.calculator.charts.legends.totalGain} radius={[8, 8, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
         <div className="mt-4 flex justify-around text-sm text-[#6B7055]">
           {comparisonData.map((item, index) => (
             <div key={index} className="text-center">
               <div className="font-medium text-[#41472D]">{item.escenario}</div>
-              <div>Tasa: {item.rate}</div>
+              <div>{t.calculator.charts.scenarios.rate}: {item.rate}</div>
             </div>
           ))}
         </div>

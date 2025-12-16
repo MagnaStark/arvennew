@@ -106,7 +106,7 @@ export const CalculatorInputs = ({
             <div className="absolute -top-2 -right-2 bg-[#EFE6AB] text-[#41472D] text-xs font-bold py-1 px-2 rounded">
               10% OFF
             </div>
-            <div className="font-medium">Apartando Ahora</div>
+            <div className="font-medium">{t.calculator.inputs.discounted}</div>
             <div className="text-sm mt-1 opacity-80">
               {currency === 'MXN' ? '$499,500 MXN' : '$27,000 USD'}
             </div>
@@ -118,14 +118,14 @@ export const CalculatorInputs = ({
       <div>
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <Label className="text-[#41472D]">Número de Fracciones: {numberOfFractions}</Label>
+            <Label className="text-[#41472D]">{t.calculator.inputs.fractions}: {numberOfFractions}</Label>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
                   <Info size={16} className="text-[#6B7055]" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className="max-w-xs">Cada fracción representa una participación en la propiedad de la villa</p>
+                  <p className="max-w-xs">{t.calculator.inputs.fractionsTooltip}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -148,17 +148,14 @@ export const CalculatorInputs = ({
       {/* Payment Type */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <Label className="text-[#41472D]">Tipo de Pago</Label>
+          <Label className="text-[#41472D]">{t.calculator.inputs.paymentType}</Label>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
                 <Info size={16} className="text-[#6B7055]" />
               </TooltipTrigger>
               <TooltipContent>
-                <p className="max-w-xs">
-                  Financiado: 5-8% anual (rendimientos después de liquidar)<br/>
-                  Contado: 8-12% anual (rendimientos desde año 1)
-                </p>
+                <p className="max-w-xs whitespace-pre-line">{t.calculator.inputs.paymentTypeTooltip}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -172,8 +169,8 @@ export const CalculatorInputs = ({
                 : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
             }`}
           >
-            <div className="font-medium">Financiado</div>
-            <div className="text-xs mt-1 opacity-80">5-8% anual</div>
+            <div className="font-medium">{t.calculator.inputs.financed}</div>
+            <div className="text-xs mt-1 opacity-80">5-8%</div>
           </button>
           <button
             onClick={() => setPaymentType('cash')}
@@ -183,8 +180,8 @@ export const CalculatorInputs = ({
                 : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
             }`}
           >
-            <div className="font-medium">Contado</div>
-            <div className="text-xs mt-1 opacity-80">8-12% anual</div>
+            <div className="font-medium">{t.calculator.inputs.cash}</div>
+            <div className="text-xs mt-1 opacity-80">8-12%</div>
           </button>
         </div>
       </div>
@@ -193,7 +190,7 @@ export const CalculatorInputs = ({
       {paymentType === 'financed' && (
         <div className="bg-[#FFFBF2] p-4 rounded-md border border-[#EFE6AB]">
           <div className="flex items-center justify-between mb-2">
-            <Label className="text-[#41472D]">Años para liquidar: {financingYears}</Label>
+            <Label className="text-[#41472D]">{t.calculator.inputs.financingYears}: {financingYears}</Label>
           </div>
           <Slider
             value={[financingYears]}
@@ -204,11 +201,11 @@ export const CalculatorInputs = ({
             className="my-4"
           />
           <div className="flex justify-between text-xs text-[#6B7055]">
-            <span>1 año</span>
-            <span>5 años</span>
+            <span>1 {t.calculator.inputs.year}</span>
+            <span>5 {t.calculator.inputs.years}</span>
           </div>
           <p className="text-xs text-[#6B7055] mt-2 italic">
-            * Los rendimientos comienzan después de liquidar la inversión
+            {t.calculator.inputs.financingNote}
           </p>
         </div>
       )}
@@ -216,7 +213,7 @@ export const CalculatorInputs = ({
       {/* Annual Rate */}
       <div>
         <div className="flex items-center justify-between mb-2">
-          <Label className="text-[#41472D]">Tasa Anual: {(annualRate * 100).toFixed(1)}%</Label>
+          <Label className="text-[#41472D]">{t.calculator.inputs.annualRate}: {(annualRate * 100).toFixed(1)}%</Label>
         </div>
         <Slider
           value={[annualRate]}
@@ -231,13 +228,13 @@ export const CalculatorInputs = ({
             onClick={() => setAnnualRate(yieldRange.min)}
             className="text-xs py-1 px-3 border border-[#D4D1C5] rounded hover:bg-[#FFFBF2] transition-colors duration-200"
           >
-            Mínimo ({(yieldRange.min * 100).toFixed(0)}%)
+            {t.calculator.inputs.minScenario} ({(yieldRange.min * 100).toFixed(0)}%)
           </button>
           <button
             onClick={() => setAnnualRate(yieldRange.max)}
             className="text-xs py-1 px-3 border border-[#D4D1C5] rounded hover:bg-[#FFFBF2] transition-colors duration-200"
           >
-            Máximo ({(yieldRange.max * 100).toFixed(0)}%)
+            {t.calculator.inputs.maxScenario} ({(yieldRange.max * 100).toFixed(0)}%)
           </button>
         </div>
       </div>
@@ -245,7 +242,7 @@ export const CalculatorInputs = ({
       {/* Projection Years */}
       <div>
         <div className="flex items-center justify-between mb-2">
-          <Label className="text-[#41472D]">Periodo de Proyección: {years} años</Label>
+          <Label className="text-[#41472D]">{t.calculator.inputs.projectionYears}: {years} {years === 1 ? t.calculator.inputs.year : t.calculator.inputs.years}</Label>
         </div>
         <Slider
           value={[years]}
@@ -256,8 +253,8 @@ export const CalculatorInputs = ({
           className="my-4"
         />
         <div className="flex justify-between text-xs text-[#6B7055]">
-          <span>1 año</span>
-          <span>15 años</span>
+          <span>1 {t.calculator.inputs.year}</span>
+          <span>15 {t.calculator.inputs.years}</span>
         </div>
       </div>
     </div>
