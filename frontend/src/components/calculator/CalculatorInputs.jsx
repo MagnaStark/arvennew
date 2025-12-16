@@ -51,7 +51,7 @@ export const CalculatorInputs = ({
                 : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
             }`}
           >
-            MXN (Pesos)
+            {t.currency.mxn}
           </button>
           <button
             onClick={() => setCurrency('USD')}
@@ -61,7 +61,7 @@ export const CalculatorInputs = ({
                 : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
             }`}
           >
-            USD (Dólares)
+            {t.currency.usd}
           </button>
         </div>
       </div>
@@ -69,7 +69,7 @@ export const CalculatorInputs = ({
       {/* Price Type Selector */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <Label className="text-[#41472D]">Precio por Fracción</Label>
+          <Label className="text-[#41472D]">{t.calculator.inputs.priceType}</Label>
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
