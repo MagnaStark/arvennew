@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { BRAND } from '../config/theme';
 import { Menu, X, Globe } from 'lucide-react';
-
-// Configurable URL from theme config
-const ARVEN_URL = BRAND.websiteUrl;
 import { useLanguage } from '../contexts/LanguageContext';
 import {
   DropdownMenu,
@@ -11,6 +8,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
+
+// Configurable URL from theme config for easy future updates
+const ARVEN_URL = BRAND.websiteUrl;
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
