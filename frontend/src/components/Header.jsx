@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { BRAND } from '../config/theme';
 import { Menu, X, Globe } from 'lucide-react';
+
+// Configurable URL from theme config
+const ARVEN_URL = BRAND.websiteUrl;
 import { useLanguage } from '../contexts/LanguageContext';
 import {
   DropdownMenu,
