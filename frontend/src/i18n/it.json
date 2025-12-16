@@ -1,0 +1,139 @@
+{
+  "language": "Italiano",
+  "currency": {"mxn": "MXN (Pesos)", "usd": "USD (Dollari)"},
+  "header": {
+    "home": "Home", "howItWorks": "Come Funziona", "calculator": "Calcolatore",
+    "benefits": "Benefici", "faq": "FAQ", "contact": "Contatto", "speakWithAdvisor": "Parla con un Consulente"
+  },
+  "hero": {
+    "tagline": "Un'Eredità Naturale", "title": "Investi nel tuo Futuro",
+    "subtitle": "Proprietà Frazionata di Ville a Tulum",
+    "description": "Accedi a rendimenti prevedibili e vantaggi lifestyle con la proprietà frazionata di ville di lusso. Investimento intelligente con rendimenti semestrali.",
+    "ctaCalculate": "Calcola i miei Rendimenti", "ctaSpeak": "Parla con un Consulente",
+    "stats": {"yield": "Rendimento Annuale", "frequency": "Semestrale", "frequencyDesc": "Rendimenti Periodici",
+    "appreciation": "$850K", "appreciationDesc": "Plusvalore in 20 mesi"}
+  },
+  "howItWorks": {
+    "title": "Come Funziona?",
+    "subtitle": "Il modello di proprietà frazionata ti permette di investire in immobili premium con capitale iniziale inferiore e rendimenti attrattivi.",
+    "steps": {
+      "choose": {"title": "Scegli le tue Frazioni", "description": "A partire da $27.000 USD con sconto. Decidi quante frazioni acquistare secondo il tuo budget."},
+      "payment": {"title": "Seleziona il tuo Metodo di Pagamento", "description": "Contanti: 8-12% annuo dall'anno 1. Finanziato: 5-8% annuo dopo il pagamento."},
+      "returns": {"title": "Ricevi Rendimenti Semestrali", "description": "Rendimenti ogni 6 mesi più plusvalore fino a $850.000 MXN in 20 mesi."},
+      "enjoy": {"title": "Goditi il tuo Investimento", "description": "Accesso alla villa a Tulum e gestione professionale della tua proprietà frazionata."}
+    },
+    "disclaimer": "* I numeri presentati sono illustrativi. I risultati reali possono variare."
+  },
+  "calculator": {
+    "title": "Calcolatore di Investimento",
+    "subtitle": "Simula i tuoi rendimenti semestrali, plusvalore e scarica la tua proiezione in PDF",
+    "inputs": {
+      "title": "Parametri di Investimento", "currency": "Valuta", "priceType": "Prezzo per Frazione",
+      "priceTypeTooltip": "Scegli tra prezzo di prevendita o prezzo con 10% di sconto",
+      "presale": "Prezzo Prevendita", "discounted": "Prenota Ora", "fractions": "Numero di Frazioni",
+      "fractionsTooltip": "Ogni frazione rappresenta una quota nella proprietà della villa",
+      "paymentType": "Tipo di Pagamento",
+      "paymentTypeTooltip": "Finanziato: 5-8% annuo (rendimenti dopo il pagamento)\nContanti: 8-12% annuo (rendimenti dall'anno 1)",
+      "financed": "Finanziato", "cash": "Contanti", "financingYears": "Anni per Saldare",
+      "financingNote": "* I rendimenti iniziano dopo aver completato il pagamento dell'investimento",
+      "annualRate": "Tasso Annuale", "minScenario": "Minimo", "maxScenario": "Massimo",
+      "projectionYears": "Periodo di Proiezione", "years": "anni", "year": "anno"
+    },
+    "summary": {
+      "title": "Riepilogo del tuo Investimento", "totalInvestment": "Investimento Totale",
+      "returns": "Rendimenti", "appreciation": "Plusvalore", "finalValue": "Valore Finale Totale",
+      "totalGain": "Guadagno Totale", "paymentType": "Tipo di Pagamento", "annualRate": "Tasso Annuale",
+      "semiannual": "semestrale", "yieldsStart": "Inizio Rendimenti", "period": "Periodo", "currency": "Valuta"
+    },
+    "charts": {
+      "yieldsOnly": "Crescita del Capitale (Solo Rendimenti)",
+      "yieldsAndAppreciation": "Valore Totale (Rendimenti + Plusvalore)",
+      "comparison": "Confronto degli Scenari",
+      "appreciationNote": "* Plusvalore stimato: fino a $850.000 MXN in 20 mesi",
+      "legends": {
+        "capitalWithYields": "Capitale con Rendimenti", "initialInvestment": "Investimento Iniziale",
+        "yieldsOnly": "Solo Rendimenti", "yieldsAndAppreciation": "Rendimenti + Plusvalore",
+        "onlyYields": "Solo Rendimenti", "totalGain": "Guadagno Totale"
+      },
+      "scenarios": {"minimum": "Minimo", "current": "Attuale", "maximum": "Massimo", "rate": "Tasso"}
+    },
+    "tables": {
+      "yearly": "Proiezione Annuale", "semiannual": "Proiezione Semestrale", "year": "Anno",
+      "startingCapital": "Capitale Iniziale", "returns": "Rendimenti", "endingCapital": "Capitale Finale",
+      "appreciation": "Plusvalore", "totalValue": "Valore Totale", "semester": "Semestre", "return": "Rendimento",
+      "status": "Stato", "active": "Attivo", "financing": "Finanziamento"
+    },
+    "downloadPDF": "Scarica Proiezione in PDF",
+    "disclaimer": "<strong>Avviso:</strong> Queste proiezioni sono illustrative e non costituiscono consulenza finanziaria. I rendimenti mostrati sono basati su stime e i risultati reali possono variare. I rendimenti su investimenti finanziati iniziano dopo aver completato il pagamento totale. Il plusvalore stimato di $850.000 MXN in 20 mesi è una proiezione e non una garanzia. Raccomandiamo di consultare un consulente finanziario prima di prendere decisioni di investimento."
+  },
+  "benefits": {
+    "title": "Benefici Principali",
+    "subtitle": "Investimento intelligente con molteplici vantaggi per il tuo patrimonio",
+    "items": {
+      "location": {"title": "Posizione Privilegiata", "description": "Comproprietà di una villa di lusso a Tulum, una delle destinazioni più ambite del Messico e dei Caraibi."},
+      "management": {"title": "Gestione Professionale", "description": "Amministrazione completa della proprietà. Ricevi i benefici senza preoccupazioni di manutenzione."},
+      "cashflow": {"title": "Flusso di Cassa Semestrale", "description": "Rendimenti periodici ogni 6 mesi più apprezzamento del capitale a lungo termine nel mercato immobiliare."},
+      "transparency": {"title": "Proiezioni Trasparenti", "description": "Calcolatore basato su dati reali che ti permette di simulare diversi scenari di investimento."}
+    }
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "subtitle": "Risposte alle domande più comuni sull'investimento frazionato",
+    "notFound": "Non trovi risposta alla tua domanda?",
+    "contactUs": "Contattaci direttamente",
+    "items": [
+      {"question": "Cos'è una \"frazione\" in Arven House?", "answer": "Una frazione rappresenta una quota nella proprietà di una villa a Tulum. Acquistando frazioni, diventi comproprietario e hai diritto a ricevere rendimenti proporzionali al tuo investimento. Il prezzo per frazione è di $555.000 MXN ($30.000 USD) o $499.500 MXN ($27.000 USD) con sconto del 10% prenotando ora."},
+      {"question": "Con che frequenza ricevo i rendimenti?", "answer": "I rendimenti vengono distribuiti semestralmente. Ciò significa che riceverai pagamenti ogni 6 mesi, calcolati in base al rendimento del tuo investimento e al numero di frazioni che possiedi."},
+      {"question": "I rendimenti sono garantiti?", "answer": "No. Le proiezioni mostrate nel nostro calcolatore sono illustrative e basate su stime conservative del mercato immobiliare di Tulum. I rendimenti reali possono variare. Il plusvalore stimato di $850.000 MXN in 20 mesi non è anch'esso una garanzia."},
+      {"question": "Qual è la differenza tra pagamento finanziato e contanti?", "answer": "Il pagamento in contanti ti permette di accedere a rendimenti più alti (8-12% annuo) a partire dal primo anno. Il pagamento finanziato offre accessibilità con pagamenti programmati, con rendimenti del 5-8% annuo che INIZIANO DOPO aver pagato completamente il tuo investimento."},
+      {"question": "Quando inizio a ricevere rendimenti se finanzio?", "answer": "Se scegli il finanziamento, i rendimenti iniziano DOPO aver pagato completamente le tue frazioni. Ad esempio, se finanzi per 2 anni, i rendimenti inizierebbero nell'anno 3."},
+      {"question": "Cos'è il plusvalore di $850.000 MXN?", "answer": "Il plusvalore è l'aumento stimato del valore della proprietà. Proiettiamo che il valore può raggiungere fino a $850.000 MXN in un periodo di 20 mesi. Questa è una stima basata sul mercato di Tulum e non costituisce una garanzia."},
+      {"question": "Posso vendere le mie frazioni?", "answer": "Sì, le frazioni possono essere vendute, ma questo è soggetto alle condizioni stabilite nel contratto di comproprietà."},
+      {"question": "Come funziona la gestione della proprietà?", "answer": "Arven House gestisce tutta la gestione professionale della villa: manutenzione, pulizia, marketing per affitti vacanza, servizi agli ospiti e amministrazione finanziaria."}
+    ]
+  },
+  "contact": {
+    "title": "Inizia il tuo Investimento",
+    "subtitle": "Completa il modulo e un consulente specializzato ti contatterà",
+    "form": {
+      "name": "Nome Completo", "email": "Email", "phone": "Telefono",
+      "investment": "Importo approssimativo di investimento o numero di frazioni",
+      "investmentPlaceholder": "Es: 2 frazioni o $60.000 USD",
+      "message": "Messaggio aggiuntivo (opzionale)",
+      "messagePlaceholder": "Raccontaci del tuo interesse...",
+      "submit": "Voglio Parlare con un Consulente",
+      "successTitle": "Grazie per il tuo interesse!",
+      "successMessage": "Un consulente ti contatterà presto.",
+      "errorRequired": "Completa tutti i campi richiesti",
+      "errorEmail": "Inserisci un'email valida"
+    },
+    "why": {
+      "title": "Perché investire con Arven House?",
+      "items": [
+        "Accesso a proprietà di lusso con capitale iniziale inferiore",
+        "Rendimenti semestrali prevedibili",
+        "Gestione professionale senza preoccupazioni",
+        "Posizione in una delle destinazioni più esclusive",
+        "Trasparenza totale con proiezioni basate su dati"
+      ]
+    },
+    "direct": {
+      "title": "Contatto Diretto",
+      "email": "Email: contacto@arvenhouse.com",
+      "phone": "Telefono: +52 998 123 4567",
+      "whatsapp": "WhatsApp: +52 998 123 4567"
+    }
+  },
+  "footer": {
+    "tagline": "UN'EREDITÀ NATURALE",
+    "description": "Investimento frazionato in ville di lusso a Tulum. Un'eredità naturale per il tuo futuro.",
+    "contact": "Contatto", "followUs": "Seguici", "terms": "Termini e Condizioni",
+    "privacy": "Informativa sulla Privacy", "rights": "Tutti i diritti riservati."
+  },
+  "toast": {
+    "generatingPDF": "Generazione PDF...",
+    "pdfSuccess": "PDF scaricato con successo",
+    "pdfError": "Errore nella generazione del PDF",
+    "formSuccess": "Grazie per il tuo interesse! Un consulente ti contatterà presto."
+  }
+}
