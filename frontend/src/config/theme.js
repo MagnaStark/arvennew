@@ -5,6 +5,7 @@ export const BRAND = {
   name: 'Arven House',
   tagline: 'UN LEGADO NATURAL',
   logo: '/logo.png',
+  websiteUrl: 'https://www.arvenhouse.com.mx/',
   
   colors: {
     // Primary Colors
