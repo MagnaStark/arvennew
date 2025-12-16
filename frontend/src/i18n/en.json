@@ -1,0 +1,242 @@
+{
+  "language": "English",
+  "currency": {
+    "mxn": "MXN (Pesos)",
+    "usd": "USD (Dollars)"
+  },
+  "header": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "calculator": "Calculator",
+    "benefits": "Benefits",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "speakWithAdvisor": "Speak with Advisor"
+  },
+  "hero": {
+    "tagline": "A Natural Legacy",
+    "title": "Invest in Your Future",
+    "subtitle": "Fractional Villa Ownership in Tulum",
+    "description": "Access predictable returns and lifestyle benefits with fractional ownership of luxury villas. Smart investment with semi-annual returns.",
+    "ctaCalculate": "Calculate My Returns",
+    "ctaSpeak": "Speak with an Advisor",
+    "stats": {
+      "yield": "Annual Yield",
+      "frequency": "Semi-Annual",
+      "frequencyDesc": "Periodic Returns",
+      "appreciation": "$850K",
+      "appreciationDesc": "Appreciation in 20 months"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works?",
+    "subtitle": "The fractional ownership model allows you to invest in premium real estate with lower initial capital and attractive returns.",
+    "steps": {
+      "choose": {
+        "title": "Choose Your Fractions",
+        "description": "From $27,000 USD with discount. Decide how many fractions to acquire based on your budget."
+      },
+      "payment": {
+        "title": "Select Your Payment Method",
+        "description": "Cash: 8-12% annual from year 1. Financed: 5-8% annual after payoff."
+      },
+      "returns": {
+        "title": "Receive Semi-Annual Returns",
+        "description": "Returns every 6 months plus appreciation of up to $850,000 MXN in 20 months."
+      },
+      "enjoy": {
+        "title": "Enjoy Your Investment",
+        "description": "Access to the villa in Tulum and professional management of your fractional property."
+      }
+    },
+    "disclaimer": "* The numbers presented are illustrative. Actual results may vary."
+  },
+  "calculator": {
+    "title": "Investment Calculator",
+    "subtitle": "Simulate your semi-annual returns, appreciation, and download your projection as PDF",
+    "inputs": {
+      "title": "Investment Parameters",
+      "currency": "Currency",
+      "priceType": "Price per Fraction",
+      "priceTypeTooltip": "Choose between pre-sale price or 10% discount price",
+      "presale": "Pre-Sale Price",
+      "discounted": "Reserve Now",
+      "fractions": "Number of Fractions",
+      "fractionsTooltip": "Each fraction represents a stake in the villa property",
+      "paymentType": "Payment Type",
+      "paymentTypeTooltip": "Financed: 5-8% annual (returns after payoff)\nCash: 8-12% annual (returns from year 1)",
+      "financed": "Financed",
+      "cash": "Cash",
+      "financingYears": "Years to Pay Off",
+      "financingNote": "* Returns begin after completing the investment payoff",
+      "annualRate": "Annual Rate",
+      "minScenario": "Minimum",
+      "maxScenario": "Maximum",
+      "projectionYears": "Projection Period",
+      "years": "years",
+      "year": "year"
+    },
+    "summary": {
+      "title": "Your Investment Summary",
+      "totalInvestment": "Total Investment",
+      "returns": "Returns",
+      "appreciation": "Appreciation",
+      "finalValue": "Total Final Value",
+      "totalGain": "Total Gain",
+      "paymentType": "Payment Type",
+      "annualRate": "Annual Rate",
+      "semiannual": "semi-annual",
+      "yieldsStart": "Returns Start",
+      "period": "Period",
+      "currency": "Currency"
+    },
+    "charts": {
+      "yieldsOnly": "Capital Growth (Returns Only)",
+      "yieldsAndAppreciation": "Total Value (Returns + Appreciation)",
+      "comparison": "Scenario Comparison",
+      "appreciationNote": "* Estimated appreciation: up to $850,000 MXN in 20 months",
+      "legends": {
+        "capitalWithYields": "Capital with Returns",
+        "initialInvestment": "Initial Investment",
+        "yieldsOnly": "Returns Only",
+        "yieldsAndAppreciation": "Returns + Appreciation",
+        "onlyYields": "Returns Only",
+        "totalGain": "Total Gain"
+      },
+      "scenarios": {
+        "minimum": "Minimum",
+        "current": "Current",
+        "maximum": "Maximum",
+        "rate": "Rate"
+      }
+    },
+    "tables": {
+      "yearly": "Annual Projection",
+      "semiannual": "Semi-Annual Projection",
+      "year": "Year",
+      "startingCapital": "Starting Capital",
+      "returns": "Returns",
+      "endingCapital": "Ending Capital",
+      "appreciation": "Appreciation",
+      "totalValue": "Total Value",
+      "semester": "Semester",
+      "return": "Return",
+      "status": "Status",
+      "active": "Active",
+      "financing": "Financing"
+    },
+    "downloadPDF": "Download Projection as PDF",
+    "disclaimer": "<strong>Notice:</strong> These projections are illustrative and do not constitute financial advice. The returns shown are based on estimates and actual results may vary. Returns on financed investments begin after completing the total payment. The estimated appreciation of $850,000 MXN in 20 months is a projection and not a guarantee. We recommend consulting with a financial advisor before making investment decisions."
+  },
+  "benefits": {
+    "title": "Key Benefits",
+    "subtitle": "Smart investment with multiple advantages for your wealth",
+    "items": {
+      "location": {
+        "title": "Prime Location",
+        "description": "Co-ownership in a luxury villa in Tulum, one of the most sought-after destinations in Mexico and the Caribbean."
+      },
+      "management": {
+        "title": "Professional Management",
+        "description": "Complete property administration. You receive the benefits without maintenance worries."
+      },
+      "cashflow": {
+        "title": "Semi-Annual Cash Flow",
+        "description": "Periodic returns every 6 months plus long-term capital appreciation in the real estate market."
+      },
+      "transparency": {
+        "title": "Transparent Projections",
+        "description": "Calculator based on real data that allows you to simulate different investment scenarios."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to the most common questions about fractional investment",
+    "notFound": "Can't find an answer to your question?",
+    "contactUs": "Contact us directly",
+    "items": [
+      {
+        "question": "What is a \"fraction\" at Arven House?",
+        "answer": "A fraction represents a stake in the ownership of a villa in Tulum. By buying fractions, you become a co-owner of the property and have the right to receive returns proportional to your investment, as well as enjoy the property according to the established agreement. The price per fraction is $555,000 MXN ($30,000 USD) or $499,500 MXN ($27,000 USD) with a 10% discount when reserving now."
+      },
+      {
+        "question": "How often do I receive returns?",
+        "answer": "Returns are distributed semi-annually. This means you will receive payments every 6 months, calculated based on the return on your investment and the number of fractions you own."
+      },
+      {
+        "question": "Are returns guaranteed?",
+        "answer": "No. The projections shown in our calculator are illustrative and based on conservative estimates of the Tulum real estate market. Actual returns may vary depending on multiple factors such as property occupancy, market conditions, and operating costs. The estimated appreciation of $850,000 MXN in 20 months is also not a guarantee. This does not constitute financial advice."
+      },
+      {
+        "question": "What is the difference between financed and cash payment?",
+        "answer": "Cash payment allows you to access higher returns (8-12% annual) starting from the first year, as there are no financing costs. Financed payment offers accessibility with scheduled payments, with returns of 5-8% annual that START AFTER you have fully paid off your investment."
+      },
+      {
+        "question": "When do I start receiving returns if I finance?",
+        "answer": "If you choose financing, returns begin AFTER you have completely paid off your fractions. For example, if you finance for 2 years, returns would start in year 3. During the financing period, your payments go toward paying off the investment."
+      },
+      {
+        "question": "What is the $850,000 MXN appreciation?",
+        "answer": "Appreciation is the estimated increase in property value. We project that the value can reach up to $850,000 MXN over a period of 20 months (1 year and 8 months). This is an estimate based on the Tulum market and does not constitute a guarantee."
+      },
+      {
+        "question": "Can I sell my fractions?",
+        "answer": "Yes, fractions can be sold, but this is subject to the conditions established in the co-ownership contract. Typically there is an approval process and other co-owners may have right of first refusal."
+      },
+      {
+        "question": "How does property management work?",
+        "answer": "Arven House handles all professional villa management: maintenance, cleaning, vacation rental marketing, guest services, and financial administration. You only receive your semi-annual returns without worrying about daily operations."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Start Your Investment",
+    "subtitle": "Complete the form and a specialized advisor will contact you",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "investment": "Approximate investment amount or number of fractions",
+      "investmentPlaceholder": "E.g.: 2 fractions or $60,000 USD",
+      "message": "Additional message (optional)",
+      "messagePlaceholder": "Tell us more about your interest...",
+      "submit": "I Want to Speak with an Advisor",
+      "successTitle": "Thank you for your interest!",
+      "successMessage": "An advisor will contact you soon.",
+      "errorRequired": "Please complete all required fields",
+      "errorEmail": "Please enter a valid email"
+    },
+    "why": {
+      "title": "Why invest with Arven House?",
+      "items": [
+        "Access to luxury property with lower initial capital",
+        "Predictable semi-annual returns",
+        "Professional management without worries",
+        "Location in one of the most exclusive destinations",
+        "Total transparency with data-driven projections"
+      ]
+    },
+    "direct": {
+      "title": "Direct Contact",
+      "email": "Email: contacto@arvenhouse.com",
+      "phone": "Phone: +52 998 123 4567",
+      "whatsapp": "WhatsApp: +52 998 123 4567"
+    }
+  },
+  "footer": {
+    "tagline": "A NATURAL LEGACY",
+    "description": "Fractional investment in luxury villas in Tulum. A natural legacy for your future.",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved."
+  },
+  "toast": {
+    "generatingPDF": "Generating PDF...",
+    "pdfSuccess": "PDF downloaded successfully",
+    "pdfError": "Error generating PDF",
+    "formSuccess": "Thank you for your interest! An advisor will contact you soon."
+  }
+}
