@@ -28,6 +28,8 @@ export const CalculatorInputs = ({
   financingYears,
   setFinancingYears,
 }) => {
+  const { t } = useLanguage();
+  
   // Get current price based on currency and price type
   const currentPrice = priceType === 'presale' 
     ? PRICING.preSale[currency]
@@ -35,11 +37,11 @@ export const CalculatorInputs = ({
 
   return (
     <div className="space-y-6 bg-white p-6 rounded-lg border-2 border-[#D4D1C5]">
-      <h3 className="text-xl font-semibold text-[#41472D] mb-4">Parámetros de Inversión</h3>
+      <h3 className="text-xl font-semibold text-[#41472D] mb-4">{t.calculator.inputs.title}</h3>
 
       {/* Currency Selector */}
       <div>
-        <Label className="text-[#41472D] mb-3 block">Moneda</Label>
+        <Label className="text-[#41472D] mb-3 block">{t.calculator.inputs.currency}</Label>
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => setCurrency('MXN')}
