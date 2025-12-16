@@ -47,10 +47,16 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#D4D1C5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
+          {/* Logo - Clickable link to main website */}
+          <a 
+            href={ARVEN_URL} 
+            target="_self"
+            rel="noopener"
+            className="flex items-center cursor-pointer shrink-0"
+            aria-label="Ir al sitio web de Arven House"
+          >
             <img src={BRAND.logo} alt="Arven House" className="h-12 w-auto" />
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
