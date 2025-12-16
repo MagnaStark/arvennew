@@ -34,11 +34,10 @@ export const HowItWorksSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-[#41472D] mb-4" style={{ fontFamily: "'Pinyon Script', cursive" }}>
-            ¿Cómo Funciona?
+            {t.howItWorks.title}
           </h2>
           <p className="text-lg text-[#6B7055] max-w-2xl mx-auto">
-            El modelo de propiedad fraccionada te permite invertir en bienes raíces premium 
-            con menor capital inicial y rendimientos atractivos.
+            {t.howItWorks.subtitle}
           </p>
         </div>
 
