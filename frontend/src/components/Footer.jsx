@@ -1,8 +1,11 @@
 import React from 'react';
 import { BRAND } from '../config/theme';
 import { Facebook, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-[#41472D] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -10,15 +13,15 @@ export const Footer = () => {
           {/* Brand Section */}
           <div>
             <img src={BRAND.logo} alt="Arven House" className="h-16 w-auto mb-4 brightness-0 invert" />
-            <p className="text-[#EFE6AB] text-sm italic mb-2">{BRAND.tagline}</p>
+            <p className="text-[#EFE6AB] text-sm italic mb-2">{t.footer.tagline}</p>
             <p className="text-gray-300 text-sm">
-              Inversión fraccionada en villas de lujo en Tulum. Un legado natural para tu futuro.
+              {t.footer.description}
             </p>
           </div>
 
           {/* Contact Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contacto</h3>
+            <h3 className="text-xl font-semibold mb-4">{t.footer.contact}</h3>
             <div className="space-y-3">
               <a href="mailto:contacto@arvenhouse.com" className="flex items-center text-gray-300 hover:text-[#EFE6AB] transition-colors duration-200">
                 <Mail size={18} className="mr-2" />
@@ -37,7 +40,7 @@ export const Footer = () => {
 
           {/* Social & Legal Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Síguenos</h3>
+            <h3 className="text-xl font-semibold mb-4">{t.footer.followUs}</h3>
             <div className="flex space-x-4 mb-6">
               <a href="#" className="text-gray-300 hover:text-[#EFE6AB] transition-colors duration-200">
                 <Facebook size={24} />
@@ -48,10 +51,10 @@ export const Footer = () => {
             </div>
             <div className="space-y-2">
               <a href="#" className="block text-gray-300 text-sm hover:text-[#EFE6AB] transition-colors duration-200">
-                Términos y Condiciones
+                {t.footer.terms}
               </a>
               <a href="#" className="block text-gray-300 text-sm hover:text-[#EFE6AB] transition-colors duration-200">
-                Política de Privacidad
+                {t.footer.privacy}
               </a>
             </div>
           </div>
@@ -59,7 +62,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 mt-8 pt-6 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Arven House. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Arven House. {t.footer.rights}</p>
         </div>
       </div>
     </footer>

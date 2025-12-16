@@ -1,30 +1,33 @@
 import React from 'react';
 import { MapPin, Shield, BarChart3, Users } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const BenefitsSection = () => {
+  const { t } = useLanguage();
+
   const benefits = [
     {
       icon: MapPin,
-      title: 'Ubicación Privilegiada',
-      description: 'Co-propiedad en una villa de lujo en Tulum, uno de los destinos más codiciados de México y el Caribe.',
+      title: t.benefits.items.location.title,
+      description: t.benefits.items.location.description,
       color: 'from-[#41472D] to-[#6B7055]',
     },
     {
       icon: Shield,
-      title: 'Gestión Profesional',
-      description: 'Administración completa de la propiedad. Tú recibes los beneficios sin preocupaciones de mantenimiento.',
+      title: t.benefits.items.management.title,
+      description: t.benefits.items.management.description,
       color: 'from-[#6B7055] to-[#41472D]',
     },
     {
       icon: BarChart3,
-      title: 'Flujo de Efectivo Trimestral',
-      description: 'Retornos periódicos cada trimestre más apreciación del capital a largo plazo en el mercado inmobiliario.',
+      title: t.benefits.items.cashflow.title,
+      description: t.benefits.items.cashflow.description,
       color: 'from-[#41472D] to-[#6B7055]',
     },
     {
       icon: Users,
-      title: 'Proyecciones Transparentes',
-      description: 'Calculadora basada en datos reales que te permite simular diferentes escenarios de inversión.',
+      title: t.benefits.items.transparency.title,
+      description: t.benefits.items.transparency.description,
       color: 'from-[#6B7055] to-[#41472D]',
     },
   ];
@@ -35,10 +38,10 @@ export const BenefitsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-[#41472D] mb-4" style={{ fontFamily: "'Pinyon Script', cursive" }}>
-            Beneficios Clave
+            {t.benefits.title}
           </h2>
           <p className="text-lg text-[#6B7055] max-w-2xl mx-auto">
-            Inversión inteligente con múltiples ventajas para tu patrimonio
+            {t.benefits.subtitle}
           </p>
         </div>
 
