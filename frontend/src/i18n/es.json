@@ -1,0 +1,242 @@
+{
+  "language": "Español",
+  "currency": {
+    "mxn": "MXN (Pesos)",
+    "usd": "USD (Dólares)"
+  },
+  "header": {
+    "home": "Inicio",
+    "howItWorks": "Cómo Funciona",
+    "calculator": "Calculadora",
+    "benefits": "Beneficios",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "speakWithAdvisor": "Hablar con asesor"
+  },
+  "hero": {
+    "tagline": "Un Legado Natural",
+    "title": "Invierte en tu Futuro",
+    "subtitle": "Propiedad Fraccionada de Villas en Tulum",
+    "description": "Accede a rendimientos predecibles y beneficios de estilo de vida con propiedad fraccionada en villas de lujo. Inversión inteligente con retornos semestrales.",
+    "ctaCalculate": "Calcular mi rendimiento",
+    "ctaSpeak": "Hablar con un asesor",
+    "stats": {
+      "yield": "Rendimiento anual",
+      "frequency": "Semestral",
+      "frequencyDesc": "Retornos periódicos",
+      "appreciation": "$850K",
+      "appreciationDesc": "Plusvalía en 20 meses"
+    }
+  },
+  "howItWorks": {
+    "title": "¿Cómo Funciona?",
+    "subtitle": "El modelo de propiedad fraccionada te permite invertir en bienes raíces premium con menor capital inicial y rendimientos atractivos.",
+    "steps": {
+      "choose": {
+        "title": "Elige tus Fracciones",
+        "description": "Desde $499,500 MXN con descuento. Decide cuántas fracciones adquirir según tu presupuesto."
+      },
+      "payment": {
+        "title": "Selecciona tu Forma de Pago",
+        "description": "Contado: 8-12% anual desde año 1. Financiado: 5-8% anual después de liquidar."
+      },
+      "returns": {
+        "title": "Recibe Rendimientos Semestrales",
+        "description": "Retornos cada 6 meses más plusvalía de hasta $850,000 MXN en 20 meses."
+      },
+      "enjoy": {
+        "title": "Disfruta tu Patrimonio",
+        "description": "Acceso a la villa en Tulum y gestión profesional de tu propiedad fraccionada."
+      }
+    },
+    "disclaimer": "* Los números presentados son ilustrativos. Los resultados reales pueden variar."
+  },
+  "calculator": {
+    "title": "Calculadora de Inversión",
+    "subtitle": "Simula tus rendimientos semestrales, plusvalía y descarga tu proyección en PDF",
+    "inputs": {
+      "title": "Parámetros de Inversión",
+      "currency": "Moneda",
+      "priceType": "Precio por Fracción",
+      "priceTypeTooltip": "Elige entre precio de pre-venta o precio con 10% de descuento",
+      "presale": "Precio Pre-venta",
+      "discounted": "Apartando Ahora",
+      "fractions": "Número de Fracciones",
+      "fractionsTooltip": "Cada fracción representa una participación en la propiedad de la villa",
+      "paymentType": "Tipo de Pago",
+      "paymentTypeTooltip": "Financiado: 5-8% anual (rendimientos después de liquidar)\nContado: 8-12% anual (rendimientos desde año 1)",
+      "financed": "Financiado",
+      "cash": "Contado",
+      "financingYears": "Años para liquidar",
+      "financingNote": "* Los rendimientos comienzan después de liquidar la inversión",
+      "annualRate": "Tasa Anual",
+      "minScenario": "Mínimo",
+      "maxScenario": "Máximo",
+      "projectionYears": "Periodo de Proyección",
+      "years": "años",
+      "year": "año"
+    },
+    "summary": {
+      "title": "Resumen de tu Inversión",
+      "totalInvestment": "Inversión Total",
+      "returns": "Rendimientos",
+      "appreciation": "Plusvalía",
+      "finalValue": "Valor Total Final",
+      "totalGain": "Ganancia Total",
+      "paymentType": "Tipo de Pago",
+      "annualRate": "Tasa Anual",
+      "semiannual": "semestral",
+      "yieldsStart": "Rendimientos inician",
+      "period": "Periodo",
+      "currency": "Moneda"
+    },
+    "charts": {
+      "yieldsOnly": "Crecimiento de Capital (Solo Rendimientos)",
+      "yieldsAndAppreciation": "Valor Total (Rendimientos + Plusvalía)",
+      "comparison": "Comparación de Escenarios",
+      "appreciationNote": "* Plusvalía estimada: hasta $850,000 MXN en 20 meses",
+      "legends": {
+        "capitalWithYields": "Capital con Rendimientos",
+        "initialInvestment": "Inversión Inicial",
+        "yieldsOnly": "Solo Rendimientos",
+        "yieldsAndAppreciation": "Rendimientos + Plusvalía",
+        "onlyYields": "Solo Rendimientos",
+        "totalGain": "Ganancia Total"
+      },
+      "scenarios": {
+        "minimum": "Mínimo",
+        "current": "Actual",
+        "maximum": "Máximo",
+        "rate": "Tasa"
+      }
+    },
+    "tables": {
+      "yearly": "Proyección Anual",
+      "semiannual": "Proyección Semestral",
+      "year": "Año",
+      "startingCapital": "Capital Inicial",
+      "returns": "Rendimientos",
+      "endingCapital": "Capital Final",
+      "appreciation": "Plusvalía",
+      "totalValue": "Valor Total",
+      "semester": "Semestre",
+      "return": "Rendimiento",
+      "status": "Estado",
+      "active": "Activo",
+      "financing": "Financiando"
+    },
+    "downloadPDF": "Descargar Proyección en PDF",
+    "disclaimer": "<strong>Aviso:</strong> Estas proyecciones son ilustrativas y no constituyen asesoría financiera. Los rendimientos mostrados están basados en estimaciones y los resultados reales pueden variar. Los rendimientos en inversiones financiadas comienzan después de liquidar el pago total. La plusvalía estimada de $850,000 MXN en 20 meses es una proyección y no una garantía. Te recomendamos consultar con un asesor financiero antes de tomar decisiones de inversión."
+  },
+  "benefits": {
+    "title": "Beneficios Clave",
+    "subtitle": "Inversión inteligente con múltiples ventajas para tu patrimonio",
+    "items": {
+      "location": {
+        "title": "Ubicación Privilegiada",
+        "description": "Co-propiedad en una villa de lujo en Tulum, uno de los destinos más codiciados de México y el Caribe."
+      },
+      "management": {
+        "title": "Gestión Profesional",
+        "description": "Administración completa de la propiedad. Tú recibes los beneficios sin preocupaciones de mantenimiento."
+      },
+      "cashflow": {
+        "title": "Flujo de Efectivo Semestral",
+        "description": "Retornos periódicos cada 6 meses más apreciación del capital a largo plazo en el mercado inmobiliario."
+      },
+      "transparency": {
+        "title": "Proyecciones Transparentes",
+        "description": "Calculadora basada en datos reales que te permite simular diferentes escenarios de inversión."
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas a las dudas más comunes sobre inversión fraccionada",
+    "notFound": "¿No encuentras respuesta a tu pregunta?",
+    "contactUs": "Contáctanos directamente",
+    "items": [
+      {
+        "question": "¿Qué es una \"fracción\" en Arven House?",
+        "answer": "Una fracción representa una participación en la propiedad de una villa en Tulum. Al comprar fracciones, te conviertes en copropietario del inmueble y tienes derecho a recibir rendimientos proporcionales a tu inversión, así como a disfrutar de la propiedad según el acuerdo establecido. El precio por fracción es de $555,000 MXN ($30,000 USD) o $499,500 MXN ($27,000 USD) con 10% de descuento apartando ahora."
+      },
+      {
+        "question": "¿Con qué frecuencia recibo los rendimientos?",
+        "answer": "Los rendimientos se distribuyen de forma semestral. Esto significa que recibirás pagos cada 6 meses, calculados en base al rendimiento de tu inversión y al número de fracciones que poseas."
+      },
+      {
+        "question": "¿Los rendimientos están garantizados?",
+        "answer": "No. Las proyecciones mostradas en nuestra calculadora son ilustrativas y se basan en estimaciones conservadoras del mercado inmobiliario de Tulum. Los rendimientos reales pueden variar según múltiples factores como la ocupación de la propiedad, condiciones del mercado, y costos operativos. La plusvalía estimada de $850,000 MXN en 20 meses tampoco es una garantía. No constituye asesoría financiera."
+      },
+      {
+        "question": "¿Qué diferencia hay entre pago financiado y de contado?",
+        "answer": "El pago de contado te permite acceder a mayores rendimientos (8-12% anual) comenzando desde el primer año, ya que no hay costos de financiamiento. El pago financiado ofrece accesibilidad con pagos programados, con rendimientos de 5-8% anual que INICIAN DESPUÉS de liquidar completamente tu inversión."
+      },
+      {
+        "question": "¿Cuándo empiezo a recibir rendimientos si financio?",
+        "answer": "Si eliges financiamiento, los rendimientos comienzan DESPUÉS de que hayas liquidado completamente el pago de tus fracciones. Por ejemplo, si financias a 2 años, los rendimientos empezarían en el año 3. Durante el periodo de financiamiento, tus pagos se destinan a liquidar la inversión."
+      },
+      {
+        "question": "¿Qué es la plusvalía de $850,000 MXN?",
+        "answer": "La plusvalía es la apreciación estimada del valor de la propiedad. Proyectamos que el valor puede alcanzar hasta $850,000 MXN en un periodo de 20 meses (1 año y 8 meses). Esta es una estimación basada en el mercado de Tulum y no constituye una garantía."
+      },
+      {
+        "question": "¿Puedo vender mis fracciones?",
+        "answer": "Sí, las fracciones pueden venderse, pero esto está sujeto a las condiciones establecidas en el contrato de copropiedad. Normalmente existe un proceso de aprobación y los demás copropietarios pueden tener derecho de primera opción de compra."
+      },
+      {
+        "question": "¿Cómo funciona la gestión de la propiedad?",
+        "answer": "Arven House se encarga de toda la gestión profesional de la villa: mantenimiento, limpieza, marketing para rentas vacacionales, atención a huéspedes, y administración financiera. Tú solo recibes tus rendimientos semestrales sin preocuparte de las operaciones diarias."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Comienza tu Inversión",
+    "subtitle": "Completa el formulario y un asesor especializado se pondrá en contacto contigo",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "investment": "Monto aproximado de inversión o número de fracciones",
+      "investmentPlaceholder": "Ej: 2 fracciones o $1,000,000 MXN",
+      "message": "Mensaje adicional (opcional)",
+      "messagePlaceholder": "Cuéntanos más sobre tu interés...",
+      "submit": "Quiero hablar con un asesor",
+      "successTitle": "¡Gracias por tu interés!",
+      "successMessage": "Un asesor se pondrá en contacto contigo pronto.",
+      "errorRequired": "Por favor completa todos los campos requeridos",
+      "errorEmail": "Por favor ingresa un email válido"
+    },
+    "why": {
+      "title": "¿Por qué invertir con Arven House?",
+      "items": [
+        "Acceso a propiedad de lujo con menor capital inicial",
+        "Rendimientos semestrales predecibles",
+        "Gestión profesional sin preocupaciones",
+        "Ubicación en uno de los destinos más exclusivos",
+        "Transparencia total con proyecciones basadas en datos"
+      ]
+    },
+    "direct": {
+      "title": "Contacto Directo",
+      "email": "Email: contacto@arvenhouse.com",
+      "phone": "Teléfono: +52 998 123 4567",
+      "whatsapp": "WhatsApp: +52 998 123 4567"
+    }
+  },
+  "footer": {
+    "tagline": "UN LEGADO NATURAL",
+    "description": "Inversión fraccionada en villas de lujo en Tulum. Un legado natural para tu futuro.",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "rights": "Todos los derechos reservados."
+  },
+  "toast": {
+    "generatingPDF": "Generando PDF...",
+    "pdfSuccess": "PDF descargado exitosamente",
+    "pdfError": "Error al generar el PDF",
+    "formSuccess": "¡Gracias por tu interés! Un asesor se pondrá en contacto contigo pronto."
+  }
+}
