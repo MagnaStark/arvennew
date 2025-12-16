@@ -76,7 +76,7 @@ export const CalculatorInputs = ({
                 <Info size={16} className="text-[#6B7055]" />
               </TooltipTrigger>
               <TooltipContent>
-                <p className="max-w-xs">Elige entre precio de pre-venta o precio con 10% de descuento</p>
+                <p className="max-w-xs">{t.calculator.inputs.priceTypeTooltip}</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -90,7 +90,7 @@ export const CalculatorInputs = ({
                 : 'bg-white text-[#41472D] border-[#D4D1C5] hover:border-[#41472D]'
             }`}
           >
-            <div className="font-medium">Precio Pre-venta</div>
+            <div className="font-medium">{t.calculator.inputs.presale}</div>
             <div className="text-sm mt-1 opacity-80">
               {currency === 'MXN' ? '$555,000 MXN' : '$30,000 USD'}
             </div>
