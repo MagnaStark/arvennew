@@ -1,0 +1,15 @@
+Lista de traducciones necesarias en CalculatorInputs.jsx:
+- "Apartando Ahora" -> t.calculator.inputs.discounted
+- "Número de Fracciones" -> t.calculator.inputs.fractions  
+- tooltip "Cada fracción..." -> t.calculator.inputs.fractionsTooltip
+- "Tipo de Pago" -> t.calculator.inputs.paymentType
+- tooltip payment -> t.calculator.inputs.paymentTypeTooltip
+- "Financiado" -> t.calculator.inputs.financed
+- "Contado" -> t.calculator.inputs.cash
+- "Años para liquidar" -> t.calculator.inputs.financingYears
+- "* Los rendimientos..." -> t.calculator.inputs.financingNote
+- "Tasa Anual" -> t.calculator.inputs.annualRate
+- "Mínimo" -> t.calculator.inputs.minScenario
+- "Máximo" -> t.calculator.inputs.maxScenario
+- "Periodo de Proyección" -> t.calculator.inputs.projectionYears
+- "años" -> t.calculator.inputs.years
