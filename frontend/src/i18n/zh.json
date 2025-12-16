@@ -1,139 +1,242 @@
 {
   "language": "中文",
-  "currency": {"mxn": "MXN (比索)", "usd": "USD (美元)"},
+  "currency": {
+    "mxn": "MXN (Pesos)",
+    "usd": "USD (Dólares)"
+  },
   "header": {
-    "home": "首页", "howItWorks": "如何运作", "calculator": "计算器",
-    "benefits": "优势", "faq": "常见问题", "contact": "联系", "speakWithAdvisor": "与顾问交谈"
+    "home": "Inicio",
+    "howItWorks": "Cómo Funciona",
+    "calculator": "Calculadora",
+    "benefits": "Beneficios",
+    "faq": "FAQ",
+    "contact": "Contacto",
+    "speakWithAdvisor": "Hablar con asesor"
   },
   "hero": {
-    "tagline": "自然遗产", "title": "投资您的未来",
-    "subtitle": "图卢姆别墅分割产权",
-    "description": "通过豪华别墅的分割产权，获得可预测的回报和生活方式优势。每半年获得回报的智能投资。",
-    "ctaCalculate": "计算我的回报", "ctaSpeak": "与顾问交谈",
-    "stats": {"yield": "年度收益", "frequency": "每半年", "frequencyDesc": "定期回报",
-    "appreciation": "$85万", "appreciationDesc": "20个月内增值"}
+    "tagline": "Un Legado Natural",
+    "title": "Invierte en tu Futuro",
+    "subtitle": "Propiedad Fraccionada de Villas en Tulum",
+    "description": "Accede a rendimientos predecibles y beneficios de estilo de vida con propiedad fraccionada en villas de lujo. Inversión inteligente con retornos semestrales.",
+    "ctaCalculate": "Calcular mi rendimiento",
+    "ctaSpeak": "Hablar con un asesor",
+    "stats": {
+      "yield": "Rendimiento anual",
+      "frequency": "Semestral",
+      "frequencyDesc": "Retornos periódicos",
+      "appreciation": "$850K",
+      "appreciationDesc": "Plusvalía en 20 meses"
+    }
   },
   "howItWorks": {
-    "title": "如何运作？",
-    "subtitle": "分割产权模式允许您以较低的初始资本投资优质房地产，并获得有吸引力的回报。",
+    "title": "¿Cómo Funciona?",
+    "subtitle": "El modelo de propiedad fraccionada te permite invertir en bienes raíces premium con menor capital inicial y rendimientos atractivos.",
     "steps": {
-      "choose": {"title": "选择您的份额", "description": "从27,000美元开始享受折扣。根据您的预算决定购买多少份额。"},
-      "payment": {"title": "选择您的付款方式", "description": "现金：从第1年起8-12%年回报。融资：偿还后5-8%年回报。"},
-      "returns": {"title": "接收半年回报", "description": "每6个月获得回报，加上20个月内高达850,000墨西哥比索的增值。"},
-      "enjoy": {"title": "享受您的投资", "description": "进入图卢姆的别墅，专业管理您的分割产权。"}
+      "choose": {
+        "title": "Elige tus Fracciones",
+        "description": "Desde $499,500 MXN con descuento. Decide cuántas fracciones adquirir según tu presupuesto."
+      },
+      "payment": {
+        "title": "Selecciona tu Forma de Pago",
+        "description": "Contado: 8-12% anual desde año 1. Financiado: 5-8% anual después de liquidar."
+      },
+      "returns": {
+        "title": "Recibe Rendimientos Semestrales",
+        "description": "Retornos cada 6 meses más plusvalía de hasta $850,000 MXN en 20 meses."
+      },
+      "enjoy": {
+        "title": "Disfruta tu Patrimonio",
+        "description": "Acceso a la villa en Tulum y gestión profesional de tu propiedad fraccionada."
+      }
     },
-    "disclaimer": "* 所示数字仅供参考。实际结果可能有所不同。"
+    "disclaimer": "* Los números presentados son ilustrativos. Los resultados reales pueden variar."
   },
   "calculator": {
-    "title": "投资计算器",
-    "subtitle": "模拟您的半年回报、增值并下载PDF投影",
+    "title": "Calculadora de Inversión",
+    "subtitle": "Simula tus rendimientos semestrales, plusvalía y descarga tu proyección en PDF",
     "inputs": {
-      "title": "投资参数", "currency": "货币", "priceType": "每份价格",
-      "priceTypeTooltip": "在预售价格或10%折扣价格之间选择",
-      "presale": "预售价格", "discounted": "立即预订", "fractions": "份额数量",
-      "fractionsTooltip": "每份代表别墅产权的一份股份",
-      "paymentType": "付款类型",
-      "paymentTypeTooltip": "融资：5-8%年回报（偿还后）\n现金：8-12%年回报（从第1年开始）",
-      "financed": "融资", "cash": "现金", "financingYears": "偿还年限",
-      "financingNote": "* 回报在完成投资偿还后开始",
-      "annualRate": "年利率", "minScenario": "最小", "maxScenario": "最大",
-      "projectionYears": "投影期", "years": "年", "year": "年"
+      "title": "Parámetros de Inversión",
+      "currency": "Moneda",
+      "priceType": "Precio por Fracción",
+      "priceTypeTooltip": "Elige entre precio de pre-venta o precio con 10% de descuento",
+      "presale": "Precio Pre-venta",
+      "discounted": "Apartando Ahora",
+      "fractions": "Número de Fracciones",
+      "fractionsTooltip": "Cada fracción representa una participación en la propiedad de la villa",
+      "paymentType": "Tipo de Pago",
+      "paymentTypeTooltip": "Financiado: 5-8% anual (rendimientos después de liquidar)\nContado: 8-12% anual (rendimientos desde año 1)",
+      "financed": "Financiado",
+      "cash": "Contado",
+      "financingYears": "Años para liquidar",
+      "financingNote": "* Los rendimientos comienzan después de liquidar la inversión",
+      "annualRate": "Tasa Anual",
+      "minScenario": "Mínimo",
+      "maxScenario": "Máximo",
+      "projectionYears": "Periodo de Proyección",
+      "years": "años",
+      "year": "año"
     },
     "summary": {
-      "title": "您的投资摘要", "totalInvestment": "总投资",
-      "returns": "回报", "appreciation": "增值", "finalValue": "最终总价值",
-      "totalGain": "总收益", "paymentType": "付款类型", "annualRate": "年利率",
-      "semiannual": "半年", "yieldsStart": "回报开始", "period": "期间", "currency": "货币"
+      "title": "Resumen de tu Inversión",
+      "totalInvestment": "Inversión Total",
+      "returns": "Rendimientos",
+      "appreciation": "Plusvalía",
+      "finalValue": "Valor Total Final",
+      "totalGain": "Ganancia Total",
+      "paymentType": "Tipo de Pago",
+      "annualRate": "Tasa Anual",
+      "semiannual": "semestral",
+      "yieldsStart": "Rendimientos inician",
+      "period": "Periodo",
+      "currency": "Moneda"
     },
     "charts": {
-      "yieldsOnly": "资本增长（仅回报）",
-      "yieldsAndAppreciation": "总价值（回报+增值）",
-      "comparison": "情景比较",
-      "appreciationNote": "* 估计增值：20个月内高达850,000墨西哥比索",
+      "yieldsOnly": "Crecimiento de Capital (Solo Rendimientos)",
+      "yieldsAndAppreciation": "Valor Total (Rendimientos + Plusvalía)",
+      "comparison": "Comparación de Escenarios",
+      "appreciationNote": "* Plusvalía estimada: hasta $850,000 MXN en 20 meses",
       "legends": {
-        "capitalWithYields": "包含回报的资本", "initialInvestment": "初始投资",
-        "yieldsOnly": "仅回报", "yieldsAndAppreciation": "回报+增值",
-        "onlyYields": "仅回报", "totalGain": "总收益"
+        "capitalWithYields": "Capital con Rendimientos",
+        "initialInvestment": "Inversión Inicial",
+        "yieldsOnly": "Solo Rendimientos",
+        "yieldsAndAppreciation": "Rendimientos + Plusvalía",
+        "onlyYields": "Solo Rendimientos",
+        "totalGain": "Ganancia Total"
       },
-      "scenarios": {"minimum": "最小", "current": "当前", "maximum": "最大", "rate": "利率"}
+      "scenarios": {
+        "minimum": "Mínimo",
+        "current": "Actual",
+        "maximum": "Máximo",
+        "rate": "Tasa"
+      }
     },
     "tables": {
-      "yearly": "年度投影", "semiannual": "半年投影", "year": "年",
-      "startingCapital": "初始资本", "returns": "回报", "endingCapital": "最终资本",
-      "appreciation": "增值", "totalValue": "总价值", "semester": "学期", "return": "回报",
-      "status": "状态", "active": "活跃", "financing": "融资"
+      "yearly": "Proyección Anual",
+      "semiannual": "Proyección Semestral",
+      "year": "Año",
+      "startingCapital": "Capital Inicial",
+      "returns": "Rendimientos",
+      "endingCapital": "Capital Final",
+      "appreciation": "Plusvalía",
+      "totalValue": "Valor Total",
+      "semester": "Semestre",
+      "return": "Rendimiento",
+      "status": "Estado",
+      "active": "Activo",
+      "financing": "Financiando"
     },
-    "downloadPDF": "下载PDF投影",
-    "disclaimer": "<strong>通知：</strong>这些投影仅供参考，不构成财务建议。显示的回报基于估计，实际结果可能有所不同。融资投资的回报在完成全额付款后开始。20个月内850,000墨西哥比索的估计增值是一个投影，而不是保证。我们建议在做出投资决定之前咨询财务顾问。"
+    "downloadPDF": "Descargar Proyección en PDF",
+    "disclaimer": "<strong>Aviso:</strong> Estas proyecciones son ilustrativas y no constituyen asesoría financiera. Los rendimientos mostrados están basados en estimaciones y los resultados reales pueden variar. Los rendimientos en inversiones financiadas comienzan después de liquidar el pago total. La plusvalía estimada de $850,000 MXN en 20 meses es una proyección y no una garantía. Te recomendamos consultar con un asesor financiero antes de tomar decisiones de inversión."
   },
   "benefits": {
-    "title": "主要优势",
-    "subtitle": "为您的财富提供多重优势的智能投资",
+    "title": "Beneficios Clave",
+    "subtitle": "Inversión inteligente con múltiples ventajas para tu patrimonio",
     "items": {
-      "location": {"title": "优越位置", "description": "在图卢姆拥有豪华别墅的共同所有权，这是墨西哥和加勒比地区最受欢迎的目的地之一。"},
-      "management": {"title": "专业管理", "description": "完整的物业管理。您无需担心维护即可获得收益。"},
-      "cashflow": {"title": "半年现金流", "description": "每6个月定期回报加上房地产市场的长期资本增值。"},
-      "transparency": {"title": "透明投影", "description": "基于真实数据的计算器，让您可以模拟不同的投资场景。"}
+      "location": {
+        "title": "Ubicación Privilegiada",
+        "description": "Co-propiedad en una villa de lujo en Tulum, uno de los destinos más codiciados de México y el Caribe."
+      },
+      "management": {
+        "title": "Gestión Profesional",
+        "description": "Administración completa de la propiedad. Tú recibes los beneficios sin preocupaciones de mantenimiento."
+      },
+      "cashflow": {
+        "title": "Flujo de Efectivo Semestral",
+        "description": "Retornos periódicos cada 6 meses más apreciación del capital a largo plazo en el mercado inmobiliario."
+      },
+      "transparency": {
+        "title": "Proyecciones Transparentes",
+        "description": "Calculadora basada en datos reales que te permite simular diferentes escenarios de inversión."
+      }
     }
   },
   "faq": {
-    "title": "常见问题",
-    "subtitle": "关于分割产权投资最常见问题的答案",
-    "notFound": "找不到您问题的答案？",
-    "contactUs": "直接联系我们",
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas a las dudas más comunes sobre inversión fraccionada",
+    "notFound": "¿No encuentras respuesta a tu pregunta?",
+    "contactUs": "Contáctanos directamente",
     "items": [
-      {"question": "Arven House的"份额"是什么？", "answer": "份额代表图卢姆别墅产权的一部分。通过购买份额，您成为共有业主，有权获得与您的投资成比例的回报。每份价格为555,000墨西哥比索（30,000美元）或499,500墨西哥比索（27,000美元），立即预订可享受10%折扣。"},
-      {"question": "我多久收到一次回报？", "answer": "回报每半年分配一次。这意味着您将每6个月收到一次付款，根据您的投资回报和您拥有的份额数量计算。"},
-      {"question": "回报有保证吗？", "answer": "没有。我们计算器中显示的投影仅供参考，基于图卢姆房地产市场的保守估计。实际回报可能会根据多种因素而变化。20个月内850,000墨西哥比索的估计增值也不是保证。"},
-      {"question": "融资付款和现金付款有什么区别？", "answer": "现金付款让您从第一年开始获得更高的回报（8-12%年），因为没有融资成本。融资付款提供可及性，有计划的付款，回报为5-8%年，在您完全偿还投资后开始。"},
-      {"question": "如果我融资，何时开始收到回报？", "answer": "如果您选择融资，回报在您完全偿还份额后开始。例如，如果您融资2年，回报将从第3年开始。"},
-      {"question": "850,000墨西哥比索的增值是什么？", "answer": "增值是物业价值的估计增加。我们预计价值可以在20个月内达到850,000墨西哥比索。这是基于图卢姆市场的估计，不构成保证。"},
-      {"question": "我可以出售我的份额吗？", "answer": "可以，份额可以出售，但这受共有产权合同中规定的条件约束。"},
-      {"question": "物业管理如何运作？", "answer": "Arven House处理别墅的所有专业管理：维护、清洁、度假租赁营销、客人服务和财务管理。"}
+      {
+        "question": "¿Qué es una \"fracción\" en Arven House?",
+        "answer": "Una fracción representa una participación en la propiedad de una villa en Tulum. Al comprar fracciones, te conviertes en copropietario del inmueble y tienes derecho a recibir rendimientos proporcionales a tu inversión, así como a disfrutar de la propiedad según el acuerdo establecido. El precio por fracción es de $555,000 MXN ($30,000 USD) o $499,500 MXN ($27,000 USD) con 10% de descuento apartando ahora."
+      },
+      {
+        "question": "¿Con qué frecuencia recibo los rendimientos?",
+        "answer": "Los rendimientos se distribuyen de forma semestral. Esto significa que recibirás pagos cada 6 meses, calculados en base al rendimiento de tu inversión y al número de fracciones que poseas."
+      },
+      {
+        "question": "¿Los rendimientos están garantizados?",
+        "answer": "No. Las proyecciones mostradas en nuestra calculadora son ilustrativas y se basan en estimaciones conservadoras del mercado inmobiliario de Tulum. Los rendimientos reales pueden variar según múltiples factores como la ocupación de la propiedad, condiciones del mercado, y costos operativos. La plusvalía estimada de $850,000 MXN en 20 meses tampoco es una garantía. No constituye asesoría financiera."
+      },
+      {
+        "question": "¿Qué diferencia hay entre pago financiado y de contado?",
+        "answer": "El pago de contado te permite acceder a mayores rendimientos (8-12% anual) comenzando desde el primer año, ya que no hay costos de financiamiento. El pago financiado ofrece accesibilidad con pagos programados, con rendimientos de 5-8% anual que INICIAN DESPUÉS de liquidar completamente tu inversión."
+      },
+      {
+        "question": "¿Cuándo empiezo a recibir rendimientos si financio?",
+        "answer": "Si eliges financiamiento, los rendimientos comienzan DESPUÉS de que hayas liquidado completamente el pago de tus fracciones. Por ejemplo, si financias a 2 años, los rendimientos empezarían en el año 3. Durante el periodo de financiamiento, tus pagos se destinan a liquidar la inversión."
+      },
+      {
+        "question": "¿Qué es la plusvalía de $850,000 MXN?",
+        "answer": "La plusvalía es la apreciación estimada del valor de la propiedad. Proyectamos que el valor puede alcanzar hasta $850,000 MXN en un periodo de 20 meses (1 año y 8 meses). Esta es una estimación basada en el mercado de Tulum y no constituye una garantía."
+      },
+      {
+        "question": "¿Puedo vender mis fracciones?",
+        "answer": "Sí, las fracciones pueden venderse, pero esto está sujeto a las condiciones establecidas en el contrato de copropiedad. Normalmente existe un proceso de aprobación y los demás copropietarios pueden tener derecho de primera opción de compra."
+      },
+      {
+        "question": "¿Cómo funciona la gestión de la propiedad?",
+        "answer": "Arven House se encarga de toda la gestión profesional de la villa: mantenimiento, limpieza, marketing para rentas vacacionales, atención a huéspedes, y administración financiera. Tú solo recibes tus rendimientos semestrales sin preocuparte de las operaciones diarias."
+      }
     ]
   },
   "contact": {
-    "title": "开始您的投资",
-    "subtitle": "填写表格，专业顾问将与您联系",
+    "title": "Comienza tu Inversión",
+    "subtitle": "Completa el formulario y un asesor especializado se pondrá en contacto contigo",
     "form": {
-      "name": "全名", "email": "电子邮件", "phone": "电话",
-      "investment": "大约投资金额或份额数量",
-      "investmentPlaceholder": "例如：2份或60,000美元",
-      "message": "附加消息（可选）",
-      "messagePlaceholder": "告诉我们更多关于您的兴趣...",
-      "submit": "我想与顾问交谈",
-      "successTitle": "感谢您的关注！",
-      "successMessage": "顾问将很快与您联系。",
-      "errorRequired": "请填写所有必填字段",
-      "errorEmail": "请输入有效的电子邮件"
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "investment": "Monto aproximado de inversión o número de fracciones",
+      "investmentPlaceholder": "Ej: 2 fracciones o $1,000,000 MXN",
+      "message": "Mensaje adicional (opcional)",
+      "messagePlaceholder": "Cuéntanos más sobre tu interés...",
+      "submit": "Quiero hablar con un asesor",
+      "successTitle": "¡Gracias por tu interés!",
+      "successMessage": "Un asesor se pondrá en contacto contigo pronto.",
+      "errorRequired": "Por favor completa todos los campos requeridos",
+      "errorEmail": "Por favor ingresa un email válido"
     },
     "why": {
-      "title": "为什么选择Arven House投资？",
+      "title": "¿Por qué invertir con Arven House?",
       "items": [
-        "以较低的初始资本进入豪华房产",
-        "可预测的半年回报",
-        "无忧的专业管理",
-        "位于最独特的目的地之一",
-        "基于数据的投影完全透明"
+        "Acceso a propiedad de lujo con menor capital inicial",
+        "Rendimientos semestrales predecibles",
+        "Gestión profesional sin preocupaciones",
+        "Ubicación en uno de los destinos más exclusivos",
+        "Transparencia total con proyecciones basadas en datos"
       ]
     },
     "direct": {
-      "title": "直接联系",
-      "email": "电子邮件：contacto@arvenhouse.com",
-      "phone": "电话：+52 998 123 4567",
-      "whatsapp": "WhatsApp：+52 998 123 4567"
+      "title": "Contacto Directo",
+      "email": "Email: contacto@arvenhouse.com",
+      "phone": "Teléfono: +52 998 123 4567",
+      "whatsapp": "WhatsApp: +52 998 123 4567"
     }
   },
   "footer": {
-    "tagline": "自然遗产",
-    "description": "图卢姆豪华别墅的分割产权投资。为您的未来留下自然遗产。",
-    "contact": "联系", "followUs": "关注我们", "terms": "条款和条件",
-    "privacy": "隐私政策", "rights": "版权所有。"
+    "tagline": "UN LEGADO NATURAL",
+    "description": "Inversión fraccionada en villas de lujo en Tulum. Un legado natural para tu futuro.",
+    "contact": "Contacto",
+    "followUs": "Síguenos",
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "rights": "Todos los derechos reservados."
   },
   "toast": {
-    "generatingPDF": "正在生成PDF...",
-    "pdfSuccess": "PDF下载成功",
-    "pdfError": "生成PDF时出错",
-    "formSuccess": "感谢您的关注！顾问将很快与您联系。"
+    "generatingPDF": "Generando PDF...",
+    "pdfSuccess": "PDF descargado exitosamente",
+    "pdfError": "Error al generar el PDF",
+    "formSuccess": "¡Gracias por tu interés! Un asesor se pondrá en contacto contigo pronto."
   }
 }
