@@ -1,27 +1,30 @@
 import React from 'react';
 import { Search, CreditCard, TrendingUp, Home } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const HowItWorksSection = () => {
+  const { t } = useLanguage();
+
   const steps = [
     {
       icon: Search,
-      title: 'Elige tus Fracciones',
-      description: 'Desde $499,500 MXN con descuento. Decide cuántas fracciones adquirir según tu presupuesto.',
+      title: t.howItWorks.steps.choose.title,
+      description: t.howItWorks.steps.choose.description,
     },
     {
       icon: CreditCard,
-      title: 'Selecciona tu Forma de Pago',
-      description: 'Contado: 8-12% anual desde año 1. Financiado: 5-8% anual después de liquidar.',
+      title: t.howItWorks.steps.payment.title,
+      description: t.howItWorks.steps.payment.description,
     },
     {
       icon: TrendingUp,
-      title: 'Recibe Rendimientos Semestrales',
-      description: 'Retornos cada 6 meses más plusvalía de hasta $850,000 MXN en 20 meses.',
+      title: t.howItWorks.steps.returns.title,
+      description: t.howItWorks.steps.returns.description,
     },
     {
       icon: Home,
-      title: 'Disfruta tu Patrimonio',
-      description: 'Acceso a la villa en Tulum y gestión profesional de tu propiedad fraccionada.',
+      title: t.howItWorks.steps.enjoy.title,
+      description: t.howItWorks.steps.enjoy.description,
     },
   ];
 
