@@ -76,7 +76,7 @@ export const HowItWorksSection = () => {
         {/* Disclaimer */}
         <div className="mt-12 text-center">
           <p className="text-sm text-[#6B7055] italic">
-            * Los números presentados son ilustrativos. Los resultados reales pueden variar.
+            {t.howItWorks.disclaimer}
           </p>
         </div>
       </div>
