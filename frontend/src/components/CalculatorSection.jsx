@@ -8,8 +8,11 @@ import { calculateProjection, getYieldRange } from '../utils/projectionEngine';
 import { generatePDF } from '../utils/pdfGenerator';
 import { toast } from 'sonner';
 import { PRICING } from '../config/theme';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export const CalculatorSection = () => {
+  const { t, currentLanguage } = useLanguage();
+  
   // Input states
   const [currency, setCurrency] = useState('MXN');
   const [priceType, setPriceType] = useState('discounted'); // 'presale' or 'discounted'
@@ -55,7 +58,7 @@ export const CalculatorSection = () => {
   // Handle PDF export
   const handleExportPDF = async () => {
     try {
-      toast.info('Generando PDF...');
+      toast.info(t.toast.generatingPDF);
       await generatePDF(projectionData, {
         pricePerFraction,
         numberOfFractions,
@@ -65,16 +68,16 @@ export const CalculatorSection = () => {
         currency,
         priceType,
         financingYears,
-      });
-      toast.success('PDF descargado exitosamente');
+      }, t);
+      toast.success(t.toast.pdfSuccess);
     } catch (error) {
       console.error('Error generating PDF:', error);
-      toast.error('Error al generar el PDF');
+      toast.error(t.toast.pdfError);
     }
   };
 
   if (!projectionData) {
-    return <div className="text-center py-20">Cargando calculadora...</div>;
+    return <div className="text-center py-20">Loading...</div>;
   }
 
   return (
@@ -83,10 +86,10 @@ export const CalculatorSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl text-[#41472D] mb-4" style={{ fontFamily: "'Pinyon Script', cursive" }}>
-            Calculadora de Inversión
+            {t.calculator.title}
           </h2>
           <p className="text-lg text-[#6B7055] max-w-2xl mx-auto">
-            Simula tus rendimientos semestrales, plusvalía y descarga tu proyección en PDF
+            {t.calculator.subtitle}
           </p>
         </div>
 
@@ -153,19 +156,16 @@ export const CalculatorSection = () => {
             className="group bg-[#41472D] text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-[#6B7055] transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl"
           >
             <Download className="mr-2 group-hover:translate-y-1 transition-transform duration-300" size={20} />
-            Descargar Proyección en PDF
+            {t.calculator.downloadPDF}
           </button>
         </div>
 
         {/* Disclaimer */}
         <div className="mt-8 text-center">
-          <p className="text-sm text-[#6B7055] italic max-w-3xl mx-auto bg-[#FFFBF2] p-4 rounded-lg border border-[#D4D1C5]">
-            <strong>Aviso:</strong> Estas proyecciones son ilustrativas y no constituyen asesoría financiera. 
-            Los rendimientos mostrados están basados en estimaciones y los resultados reales pueden variar. 
-            Los rendimientos en inversiones financiadas comienzan después de liquidar el pago total.
-            La plusvalía estimada de $850,000 MXN en 20 meses es una proyección y no una garantía.
-            Te recomendamos consultar con un asesor financiero antes de tomar decisiones de inversión.
-          </p>
+          <p 
+            className="text-sm text-[#6B7055] italic max-w-3xl mx-auto bg-[#FFFBF2] p-4 rounded-lg border border-[#D4D1C5]"
+            dangerouslySetInnerHTML={{ __html: t.calculator.disclaimer }}
+          />
         </div>
       </div>
     </section>

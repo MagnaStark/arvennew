@@ -9,14 +9,17 @@ import {
   TableHeader,
   TableRow,
 } from '../ui/table';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export const CalculatorTables = ({ projectionData, currency }) => {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-white p-6 rounded-lg border-2 border-[#D4D1C5]">
       <Tabs defaultValue="yearly" className="w-full">
         <TabsList className="grid w-full grid-cols-2 mb-6">
-          <TabsTrigger value="yearly">Proyección Anual</TabsTrigger>
-          <TabsTrigger value="semiannual">Proyección Semestral</TabsTrigger>
+          <TabsTrigger value="yearly">{t.calculator.tables.yearly}</TabsTrigger>
+          <TabsTrigger value="semiannual">{t.calculator.tables.semiannual}</TabsTrigger>
         </TabsList>
 
         {/* Yearly Table */}
@@ -25,12 +28,12 @@ export const CalculatorTables = ({ projectionData, currency }) => {
             <Table>
               <TableHeader>
                 <TableRow className="bg-[#FFFBF2]">
-                  <TableHead className="text-[#41472D] font-semibold">Año</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Capital Inicial</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Rendimientos</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Capital Final</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Plusvalía</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Valor Total</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.year}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.startingCapital}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.returns}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.endingCapital}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.appreciation}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.totalValue}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -59,12 +62,12 @@ export const CalculatorTables = ({ projectionData, currency }) => {
             <Table>
               <TableHeader className="sticky top-0 bg-white">
                 <TableRow className="bg-[#FFFBF2]">
-                  <TableHead className="text-[#41472D] font-semibold">Año</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Semestre</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Capital Inicial</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Rendimiento</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Capital Final</TableHead>
-                  <TableHead className="text-[#41472D] font-semibold">Estado</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.year}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.semester}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.startingCapital}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.return}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.endingCapital}</TableHead>
+                  <TableHead className="text-[#41472D] font-semibold">{t.calculator.tables.status}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -79,9 +82,9 @@ export const CalculatorTables = ({ projectionData, currency }) => {
                     <TableCell className="font-medium">{formatCurrency(periodData.endingBalance, currency)}</TableCell>
                     <TableCell>
                       {periodData.yieldsActive ? (
-                        <span className="text-green-600 text-xs">✓ Activo</span>
+                        <span className="text-green-600 text-xs">✓ {t.calculator.tables.active}</span>
                       ) : (
-                        <span className="text-gray-400 text-xs">○ Financiando</span>
+                        <span className="text-gray-400 text-xs">○ {t.calculator.tables.financing}</span>
                       )}
                     </TableCell>
                   </TableRow>
